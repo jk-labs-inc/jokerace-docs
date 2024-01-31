@@ -1,0 +1,34 @@
+# Verifying Contracts
+
+Below are the steps to verify a contract you deployed through JokeRace.
+
+::::steps
+
+## Determine the contract's version
+
+First, run the below command in your terminal to download and install [Foundry](https://github.com/foundry-rs/foundry).
+
+```bash
+curl -L https://foundry.paradigm.xyz ​| bash && foundryup
+```
+
+Run this command with the contract address and the RPC url for the chain that the contract is on (you can find a public RPC url to use on our Github [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains) if you don't have one already) to return the version of that contract.
+
+```bash
+cast call <CONTRACT ADDRESS> "version()(string)" --rpc-url "<RPC_URL>"
+```
+
+## Copy the flattened file of that contract version
+
+For `Contest.sol` look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi).
+
+For `RewardsModule.sol` look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi/modules)
+
+## Verify the contract
+
+In whatever block explorer you're using, input this information into where it enables you to verify (usually the Code tab) and you should be good to go:
+- Compiler Type: Single file
+- Compiler Version: v0.8.19
+- License Type: GNU Affero General Public License (GNU AGPLv3)
+- Optimization: Yes
+- Solidity Contract Code: Paste the copied flattened file from the previous step
