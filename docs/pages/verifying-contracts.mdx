@@ -12,7 +12,7 @@ First, run the below command in your terminal to download and install [Foundry](
 curl -L https://foundry.paradigm.xyz ​| bash && foundryup
 ```
 
-Run this command with the contract address and the RPC url for the chain that the contract is on (you can find a public RPC url to use on our Github [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains) if you don't have one already) to return the version of that contract.
+Then run this command with the contract address and the RPC url for the chain that the contract is on (you can find a public RPC url to use on our Github [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains) if you don't have one already) to return the version of that contract.
 
 ```bash
 cast call <CONTRACT ADDRESS> "version()(string)" --rpc-url "<RPC_URL>"
