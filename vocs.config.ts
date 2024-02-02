@@ -10,8 +10,14 @@ export default defineConfig({
       link: '/getting-started',
     },
     {
-      text: 'Verifying Contracts',
-      link: '/verifying-contracts',
+      text: 'Technical How-Tos',
+      collapsed: false,
+      items: [
+        {
+          text: 'Verifying Contracts',
+          link: '/verifying-contracts',
+        },
+      ]
     },
   ],
 })
