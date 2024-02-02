@@ -1,0 +1,121 @@
+# Frequently Asked Questions
+
+## What is a contest?
+
+A contest is just a way for people to submit entries and people to vote on their favorites. Every contest includes two periods: a submission period and a voting period. The participants in each might be totally different, exactly the same, or subsets of each other—you have complete control to decide who can submit and who can vote. (You can let anyone submit, but you’ll need to define voters to avoid bots affecting the results.)
+
+After you create a contest, you can add and fund an optional rewards pool too. The rewards pool is set up proportionately—for example, you might offer 60% of rewards to 1st place, 30% to 2nd, 10% to 3rd—and anyone can execute the transaction to send any rewards in the pool to the winners after the contest is over.
+
+Popular contest use cases include grants, hackathons, governance, bounties, ideathons, giveaways, awards ceremonies, best meme/tweet/essay competitions, feature requests, polls, game shows, etc. etc. Any kind of community decision is, effectively, a contest.
+
+## What kind of allowlists are possible?
+
+You can allowlist any onchain addresses you want, so you can get creative. Ultimately you can just place the addresses in column A of a csv, the voting power in column B, and upload to our site when you create a contest. So you have full freedom to determine criteria however you want.
+
+Want to save time? We’ve built some presets so that you can just drop the address of an NFT or token, and we’ll allowlist all the voters—no csv required.
+
+## So token-voting is possible?
+
+Absolutely! Token-voting is the easiest option: just drop the token address, and the holders will be allowlisted.
+
+But it’s not the only option. If you want to allowlist based on other criteria, you can handle however you like—as long as you have a list of addresses to share.
+
+## How many addresses can I allowlist?
+
+Up to 100,000 addresses can be allowlisted for both submission and voting. You can also let anyone submit entries to your contest if you like.
+
+## How can I monetize from creating contests?
+
+On the final page of creating a contest, you can set monetization options to charge players for submitting and voting. JokeRace splits these fees with you 50/50, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality submissions and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
+
+So for example, let’s say you want to create a game show that runs each week. You might start by having relatively low submission fees with low rewards. The next week, you might take your earnings from submissions and put them into a slightly higher rewards pool—justifying a slightly higher submission fee. Rinse, repeat, and over time you can raise rates sustainably.
+
+This is only one option for monetizing. Other communities may want to use contests to give utility to their token or to leverage the data from the contests to get sponsors attuned with their users. Still others might want to get sponsors for the rewards and take a cut.
+
+There are endless ways to monetize contests, some natively on JokeRace’s site, and some off-site as well.
+
+## Why is JokeRace onchain?
+
+Onchain contests give you five benefits you couldn’t get offchain.
+
+1. Monetization. Monetizable contests are only possible by building onchain. There is no way to programatically offer rewards to winners offchain. And just as importantly, there is no way to monetize contests directly offchain either—whereas onchain, we can split all commissions with you 50/50 so that everyone can earn. And that’s with 0 credit card or appstore fees that you’d incur offchain. All of this means we are the only way for projects to build a viable business through contests.
+
+
+2. Reputation. Every vote in an onchain contest is an attestation that a submission was valuable. If Vitalik votes for you in an onchain hackathon, you have a permanent portable attestation that can get you access to communities, airdrops, and job opportunities... even if you lose the hackathon. This is why reputation is crucial as a user incentive: by participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
+
+
+3. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which submitters and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
+
+
+4. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning submissions or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+
+
+5. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home. Or maybe most significantly, let submitters know they can (and ofen do) create their own incentives for voters by leveraging onchain data.
+
+## Can you delete submissions?
+
+Contest creators can delete or batch delete submissions during the submission and voting periods. Nobody can delete submissions after the contest closes (after the voting period).
+
+## Can you allowlist with ENS?
+
+ENS is not currently compatible with allowlists. If you’re manually uploading an allowlist, make sure that all addresses are written out alphanumerically, beginning with “0x”. 
+
+## I can’t submit or vote even though I should be allowlisted—what’s happening?
+
+Go to “Parameters” on the contest page, download the allowlist, and make sure your address was on it. If not, please file a bug report.
+
+## I created a contest and want to edit it. Can I update any part of it?
+
+You cannot currently edit contests, but you can set your contest to unlisted (go to your user profile in the upper right and tap the eye icon next to the contest), then redeploy a new contest.
+ 
+## How do I find the contract address for a contest?
+
+Copy the url of the contest. The last string of letters and numbers is the contract address. Every url is formatted as follows: www.jokerace.io/contest/[chain]/[contract-address]
+
+## Why can’t I let anyone vote?
+
+If anyone could vote, arbitrary numbers of bots could vote arbitrary number of votes, throwing the result of the contest. It would no longer have meaning.
+
+## Is there a way to capture the allowlist at a later point after the contest is launched?
+
+No, all components of the contest, including the allowlist, must be decided when the contest is created. This is because each contest is a smart contract that you’re deploying to the chain you’re connected to in your wallet—so every component needs to be predetermined.
+
+## Can I withdraw funds from a rewards pool I created?
+
+Yes, the contest creator can always withdraw rewards from the rewards pool, but keep in mind legal liability if you’ve promised rewards to winners.
+
+## Can I withdraw funds from a rewards pool I funded?
+
+Only contest creators can withdraw funds of the associated rewards pool. If you are not the contest creator, we highly recommend that you do not fund a rewards pool, as there is no way for you to withdraw funds.
+
+## What happens in the case of a tie?
+
+In the case of a tie, all funds will be reverted to the contest creator to distribute manually.
+
+## How does funding the prize pool work?
+
+You can fund the prize pool on the “rewards” page or sending ERC20s directly to the contract address on the rewards page.
+
+## Can I delete a contest?
+
+Contests can’t be deleted.
+
+However, the contest creator can set the contest to unlisted and remove it from the rewards pool. To set it to unlisted, go to your user profile, and tap the “eye” icon. Unlisted contests can still be found at the same url and on the profile of the contest creator (as well as on the blockchain itself), but otherwise will be unlisted on the site.
+ 
+## Can I verify this contract?
+
+Yes! See [Verifying Contracts](/verifying-contracts).
+
+## I don’t want to reward anyone until they’ve been KYC’ed—how can I do this?
+
+Different organizations have different KYC policies depending how much players have earned in rewards. One option is to KYC each winner manually and then send them rewards. If you like, you could also create and fund the rewards pool after the contest ends for them to distribute. But in this case, you’ll be asking players to make some significant trust assumptions.
+
+## If I delete a submission, how does that affect who can submit?
+
+If you delete a submission, it will open up one more slot for total submissions. So let’s say your contest accepts 100 submissions, and all 100 have been entered. If you delete 1, there will now be room for one more submission (assuming the submission period is still open).
+
+However, the person whose submission you deleted does not get a bonus submission as a result. So if you only let each wallet enter one submission, the player whose submission was deleted cannot enter another submission from that wallet.
+
+## If a submission is deleted can it receive rewards?
+
+No, deleted submissions cannot earn rewards—they will be disqualified and other entries will take their place in the ranking in the contest. Please note that submissions can only be deleted while the contest is running (not after).

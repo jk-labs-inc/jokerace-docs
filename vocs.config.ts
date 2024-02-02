@@ -10,6 +10,10 @@ export default defineConfig({
       link: '/getting-started',
     },
     {
+      text: 'Frequently Asked Questions',
+      link: '/faq',
+    },
+    {
       text: 'Technical How-Tos',
       collapsed: false,
       items: [
