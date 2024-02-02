@@ -14,6 +14,10 @@ export default defineConfig({
       collapsed: false,
       items: [
         {
+          text: 'Building a Plugin',
+          link: '/building-a-plugin',
+        },
+        {
           text: 'Verifying Contracts',
           link: '/verifying-contracts',
         },

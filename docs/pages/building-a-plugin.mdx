@@ -1,0 +1,33 @@
+# Building a Plugin
+
+JokeRace is entirely onchain, which means that anyone can build on top of us!
+
+## Where to start
+A good starting place for thinking about what it looks like to build something on top of us is to think about what could happen *as a result of* a contest.
+
+For example:
+- A winning NFT could be minted on a minting platform
+- A winning grant could be funded through a grants platform
+- A winning prompt could be fed into onchain AI
+- A winning token or NFT could be bought with funds
+- A winner could programmatically earn credentials ([Hats](https://twitter.com/hatsprotocol) has already built an implementation of this [here](https://github.com/Hats-Protocol/jokerace-eligibility)!)
+
+## Comprehensive List of Available Data
+The data that you can read from our onchain contracts includes:
+- Contest Information
+  - Title
+  - Prompt
+  - Timing (contest start, submission deadline, and voting deadline)
+  - Submission and voting allowlist merkle roots
+- Submission Information
+  - Author address
+  - Submission content
+  - Comments
+  - Metadata (coming soon™)
+- Voting Information
+  - How many votes were cast on a submission and by who
+  - Aggregate vote data for a contest
+  - Proposal rankings by vote
+- Rewards Information
+  - Ranks to be paid out
+  - Rank payout proportions
