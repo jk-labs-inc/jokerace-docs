@@ -130,8 +130,7 @@ Yes. If you want to reward ERC-20s from another chain, please bridge them over t
 
 ## Which chains does JokeRace currently support monetization on?
 
-Currently monetization is live on:
-
+:::details[Chains that monetization is currently live on]
 - Arbitrum One
 - Base
 - Ethereum Mainnet
@@ -141,12 +140,14 @@ Currently monetization is live on:
 - Polygon
 - PolygonZk
 - Scroll
+- Sei
 - Sepolia Testnet
 - Zora
+:::
 
 ## Which chains is JokeRace live on?
 
-Mainnet:
+:::details[Mainnet]
 - Aevo
 - ArbitrumOne
 - Arthera
@@ -189,8 +190,9 @@ Mainnet:
 - Unique
 - Vitruveo
 - Zora
+:::
 
-Testnet:
+:::details[Testnet]
 - Arthera
 - Arbitrum One
 - Base
@@ -222,6 +224,7 @@ Testnet:
 - Taiko
 - X1
 - Zeta
+:::
 
 And finally:
 
@@ -252,3 +255,33 @@ Even then, contest creators have the option whether or not to add a rewards pool
 While quests platforms are quite good at getting a large quantity of users and bots to perform the same action, contests are good for getting quality users to compete with original entries.
 
 And this is why quests and contests can be complementary. For example, you might just allowlist anyone to submit or vote who’s performed a quest—incentivizing them to perform the quest in order to participate in the contest for greater rewards. Or you might create a quest to incentivize people to submit or vote in a contest to increase engagement. Finally, you might use the metrics from a contest to determine who your quality users are—for example, giving one “point” for each vote that submitters have gotten across your contests. You could then use these metrics to allowlist future quests to prevent bots from participating.
+
+## How can I tell which contests are legitimate?
+
+We feature top legitimate ones on our front page. But if you’re concerned, you can check any user’s profile to see the previous contests they deployed to see the traction they’ve gotten and onchain rewards they offered (and by extension, whether they were legitimate). Projects themselves will typically feature links to contests as well, so you can verify here too.
+
+If for any reason you are concerned about the legitimacy of a contest, please feel free to reach out, and remember that the risk you face is simply in lost fees for submitting or voting in the contest. For that reason, however, we encourage you *never* to send funds to a rewards pool that isn’t your own.
+
+## I’ve already collected applications, nominations, or submissions from another site. Is there a way to import them into a contest for others to vote on?
+
+You can always set up a contest that only you submit into—if you like, you can even allowlist the submissions so that only you can submit.
+
+However, we strongly recommend letter users submit directly to get the full benefits of onchain contests, including:
+
+Onchain reputation (ie every vote they get could be a point attesting to value of their project)
+Rewards for winners onchain
+Monetization (you can set submission fees that we split with you 50/50)
+
+If you do choose to submit directly, you’ll need to cover the submission fees for the contest yourself and will lose the advantages above.
+
+## I’m allowlisting addresses that I got from one chain, but I’m deploying my contest to a different chain. (For example, I’m allowlisting anyone who holds a specific token on Ethereum Mainnet, but I’m deploying my contest on Berachain). Will these addresses work across different chains?
+
+Yes—with the exception of multisigs. Individual users with hard or soft wallets can use the same accounts on all EVM chains, so if you allowlist one address that you got on one chain, that person will be able to submit or vote on whatever chain you use for your contest. This means you could effectively allowlist token holders on Ethereum Mainnet but have them perform governance entirely on Berachain, for example.
+
+The one exception is multisigs, aka multisignature wallets that are controlled by multiple addresses. These address are not transferable across chains. So if you allowlist a multisig from Ethereum Mainnet for a contest on Berachain, they *won’t* be able to use this address to submit or vote.
+
+Multisigs are, however, the exception, not the rule.
+
+## When I use a preset to allowlist token holders, is there a way to pull a list of everyone who holds that token on all chains?
+
+Unfortunately, there’s no way to query multiple chains at once, so you can only allowlist holders of a token on a given chain. Remember that you can always create a csv of all addresses you’ve personally gathered, however, if you’d like to combine addresses from a number of chains. 
