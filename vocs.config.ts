@@ -25,6 +25,10 @@ export default defineConfig({
           text: 'Verifying Contracts',
           link: '/technical-how-tos/verifying-contracts',
         },
+        {
+          text: 'JokeRace Onchain Data',
+          link: '/technical-how-tos/jokerace-onchain-data',
+        },
       ]
     },
   ],
