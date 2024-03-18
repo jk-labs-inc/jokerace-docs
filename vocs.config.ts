@@ -19,11 +19,11 @@ export default defineConfig({
       items: [
         {
           text: 'Building a Plugin',
-          link: '/building-a-plugin',
+          link: '/technical-how-tos/building-a-plugin',
         },
         {
           text: 'Verifying Contracts',
-          link: '/verifying-contracts',
+          link: '/technical-how-tos/verifying-contracts',
         },
       ]
     },
