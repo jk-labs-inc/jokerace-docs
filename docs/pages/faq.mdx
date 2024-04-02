@@ -52,6 +52,18 @@ If you delete a submission, it will open up one more slot for total submissions.
 
 However, the person whose submission you deleted does not get a bonus submission as a result. So if you only let each wallet enter one submission, the player whose submission was deleted cannot enter another submission from that wallet.
 
+### I want to input the submissions myself for everyone to vote on—what’s the best way to do this?
+
+First, when you create the contest, just allowlist yourself to submit entries. You can do this by selecting “manual entry” for the submission allowlist, and just copy-pasting your address in the top row.
+
+Second, when you’re creating the contest, just make sure that submitters (ie you) can submit enough entries. On the “customizations” page, tap the “max” button under “how many submissions can each player enter?” This will let you submit as many entries as you like.
+
+Please note, we don’t typically recommend submitting entries yourself. You’ll need to pay to submit them on major chains, and the submitters won’t get onchain reputation or rewards. But it remains an option if you’re in a hurry.
+
+### Can voters vote once or multiple times?
+
+Voters can vote as many times as they like—as long as they have enough votes. Decimal voting is not allowed, so a voter with 1 vote could only vote once. A voter with 100 votes, however, could deploy all 100 votes to one entry, or 50 to one entry and 50 to another, or spread 100 votes across 100 entries. They can always return to give more votes to entries as well.
+
 ### Which chains is JokeRace live on?
 
 :::details[Mainnet]
@@ -195,6 +207,12 @@ Multisigs are, however, the exception, not the rule.
 ### When I use a preset to allowlist token holders, is there a way to pull a list of everyone who holds that token on all chains?
 
 Unfortunately, there’s no way to query multiple chains at once, so you can only allowlist holders of a token on a given chain. Remember that you can always create a csv of all addresses you’ve personally gathered, however, if you’d like to combine addresses from a number of chains.
+
+### I’m trying to use the presets and want to allowlist tokens on another chain that isn’t listed here—is that possible?
+
+Due to API limitations, the presets only support the chains that you see listed when you select a token.
+
+However, the presets just help you save time, and you can always manually allowlist whoever you want. If you’re looking to allowlist tokens on another chain, we recommend going to that chain’s block explorer, looking up the contract for the token, tapping the “holders” tab (or equivalent), and downloading a spreadsheet of the holders. You can then put this into a new spreadsheet with voters in column A and voting power in column B (or in the case of submissions, just submitters in column A). Just export this spreadsheet as a csv and upload it when you create a contest under the appropriate allowlist page.
 
 ## Monetization
 
