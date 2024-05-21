@@ -18,8 +18,8 @@ export default defineConfig({
       collapsed: false,
       items: [
         {
-          text: 'Building a Plugin',
-          link: '/technical-how-tos/building-a-plugin',
+          text: 'Building an Extension',
+          link: '/technical-how-tos/building-an-extension',
         },
         {
           text: 'Verifying Contracts',
