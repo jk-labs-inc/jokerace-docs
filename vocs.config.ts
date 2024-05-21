@@ -29,6 +29,10 @@ export default defineConfig({
           text: 'JokeRace Onchain Data',
           link: '/technical-how-tos/jokerace-onchain-data',
         },
+        {
+          text: 'Token Buybacks',
+          link: '/technical-how-tos/token-buybacks',
+        },
       ]
     },
   ],

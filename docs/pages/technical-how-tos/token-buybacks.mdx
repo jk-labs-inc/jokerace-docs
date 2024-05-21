@@ -1,0 +1,21 @@
+# Token Buybacks
+
+We just shipped the ability for contest creators to direct where they want their earnings to go, which means that you can point them to a contract that buys back your community's token every time someone submits or votes in your contest.
+
+## How to
+
+::::steps
+
+### Deploy the buyback contract
+
+Instructions to do so are on the repository [here](https://github.com/jk-labs-inc/auto-buy-contract).
+
+### Route creator earnings to the buyback contract
+
+In the monetization step of the create flow, set the "another wallet" field below to be the address of the deployed buyback contract.
+
+![Creator Earnings Routing](/creator-earnings-routing.png)
+
+### Create your contest!
+
+Once your contest is live, all submitting and voting transaction on it will directly buy your token and send it to the player who is submitting or voting!
