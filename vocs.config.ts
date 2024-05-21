@@ -30,8 +30,8 @@ export default defineConfig({
           link: '/technical-how-tos/jokerace-onchain-data',
         },
         {
-          text: 'Token Buybacks',
-          link: '/technical-how-tos/token-buybacks',
+          text: 'Circuits',
+          link: '/technical-how-tos/circuits',
         },
       ]
     },
