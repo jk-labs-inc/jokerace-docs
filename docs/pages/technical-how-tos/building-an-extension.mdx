@@ -2,18 +2,47 @@
 
 JokeRace is entirely onchain, which means that anyone can build on top of us!
 
-## Where to start
-A good starting place for thinking about what it looks like to build something on top of us is to think about what could happen *as a result of* a contest.
+### What are extensions?
 
-For example:
-- A winning NFT could be minted on a minting platform
-- A winning grant could be funded through a grants platform
-- A winning prompt could be fed into onchain AI
-- A winning token or NFT could be bought with funds
-- A winner could programmatically earn credentials ([Hats](https://twitter.com/hatsprotocol) has already built an implementation of this [here](https://github.com/Hats-Protocol/jokerace-eligibility)!)
+Extensions are 3rd party integrations built on top of JokeRace’s protocol that extend the features and functionality of contests.
+Anyone can build an extension permissionlessly, and we’ll feature select ones on our site that link to the 3rd party’s integration. We want users to discover the services of anyone who has built on top of us.
 
-## Comprehensive List of Available Data
-The data that you can read from our onchain contracts includes:
+### What should I do if I want to build an extension?
+
+First of all, dm us on [twitter](https://twitter.com/jokerace_io)! We’d love to hear what you’re up to and see if we can support.
+
+JokeRace is fully onchain, so we have no API: the blockchain itself is effectively our API. You can query and parse and listen to any data you need directly from the chain, as each contest is its own smart contract.
+
+Generally the strongest extensions will include:
+
+1. A standalone page for a given contest—or for users to input the url to a contest. This lets us link directly to a page that’s specifically relevant to JokeRace.
+2. Ample context on the page about how the extension works and what each field means (or, alternately, a link to docs explaining these).
+3. Support for as many EVM chains as possible.
+
+Not all extensions should look the same, however. We want JokeRace to be able to feed data and metadata into everything from analytics and points platforms to onchain execution services, so our top goal is expanding use cases for partners.
+
+### What are examples of extensions?
+
+Current extensions include:
+
+- Assigning roles and powers to winners of contests with Hats Protocol
+- Generating insights about players based on their onchain histories with Bello
+- Rewarding winners NFTs with Coinvise
+- Allocating points to players with Stack
+
+Potential future extensions could include:
+
+- Minting winning entries as NFTs
+- Deploying capital with parameters set by the winning submission
+- Buying back tokens with the fees accrued by the contest
+- Resubmitting fees from contest into rewards
+- Slashing node operators based on the vote of a contest
+- Adding winners to a multisig
+- Revoking membership in a community
+- Curating data sets to train an AI agent
+- Approving an AI agent to take actions onchain
+
+### Comprehensive List of Available Data
 - Contest Information
   - Title
   - Prompt
