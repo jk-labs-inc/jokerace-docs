@@ -178,6 +178,37 @@ We feature top legitimate ones on our front page. But if you’re concerned, you
 
 If for any reason you are concerned about the legitimacy of a contest, please feel free to reach out, and remember that the risk you face is simply in lost fees for submitting or voting in the contest. For that reason, however, we encourage you *never* to send funds to a rewards pool that isn’t your own.
 
+### What are fields?
+
+Fields are exactly what they sound like: fields that contests creators can require players to fill out when entering their contest. But because these fields are all metadata—meaning they can be read permissionlessly by any smart contract onchain—anyone can parse and query the responses in the fields in order to use them as variables to execute their own smart contract logic.
+
+To put that simply, fields enable new ways to handle funding, rewards, and attestations.
+
+When a contest creator adds fields to entries, they effectively require that entrants fill out these fields in the correct format. (The main field in an entry, however, is optional.) Currently there are three formats for additional fields:
+
+1. a string (any combo of letters and numbers)
+2. a number (integer)
+3. a contract or token address
+
+Here’s a few examples of how you could build new use cases on top of fields:
+
+- **Nominating someone to win a prize**: You could hold a contest for anyone to nominate a winner who would earn a prize. Just add a field for players to give the nominee's address, and then easily send rewards to the nominee directly, rather than to the entrant who nominated them.
+
+
+- **Raising funds for a cause**: Let's say you want to raise funds for a nonprofit—but have no money. You could throw a contest for people to nominate a nonprofit by giving its address. And you could then collect submission and voting fees from the contest itself and send these to the winner. The contest itself would fund the donation.
+
+
+- **Making money from publicly-chosen awards**: Now let's say you want to make money while letting the public pick who earns an award, gets to speak at a conference, gets to appear on your podcast, etc. You can let anyone nominate a speaker, and add a field to collect their address. You could then keep the funds from the contest but give credentials to all the nominated winners.
+
+
+- **Managing a treasury**: Contest entrants could describe their proposed treasury management system and submit a field with an associated contract address. The contract for the winner could be executed, fully onchain.
+
+More advanced and abstract games are possible too. What about a contest to decide how many winners should earn the contest’s own rewards? Each entrant could submit a number in a field, with fee splits from entries and voting going into a separate onchain rewards pool. The rewards would then be divided among the top x winners, where x is the number proposed in the winning entry.
+
+Basically, you can build smart contracts on top of contests to execute *any* kind of logic involving strings, numbers, and addresses, in order to determine allocations, funding, reputation, etc.
+
+All of this can be done programmatically on [top of our contest smart contracts](https://docs.jokerace.io/technical-how-tos/jokerace-onchain-data).
+
 ## Allowlists
 
 ### What kind of allowlists are possible?
