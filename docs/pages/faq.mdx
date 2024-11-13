@@ -245,9 +245,25 @@ In the case of a tie, all funds will be reverted to the contest creator to distr
 
 You can fund the prize pool on the “rewards” page or sending ERC20s directly to the contract address on the rewards page.
 
-### I don’t want to reward anyone until they’ve been KYC’ed—how can I do this?
+### Who is responsible for KYC verification in contests?
 
-Different organizations have different KYC policies depending how much players have earned in rewards. One option is to KYC each winner manually and then send them rewards. If you like, you could also create and fund the rewards pool after the contest ends for them to distribute. But in this case, you’ll be asking players to make some significant trust assumptions.
+Contest creators are fully responsible for the deployment and ownership of smart contracts that handle contest rewards. This means that any KYC (Know Your Customer) requirements are up to the contest creator’s discretion and are not managed by us. It’s important that contest creators conduct their own due diligence and ensure that their KYC process aligns with any applicable regulations.
+
+### How high do rewards do need to be for me to KYC?
+
+Generally, KYC requirements vary by jurisdiction. Because they’re not universal, we recommend that contest creators do your own diligence to confirm compliance with local regulations. JokeRace does not enforce KYC limits directly.
+
+### Can I KYC users within the contest?
+
+If you want to KYC players, we recommend adding a field for contestants to respond to where they can link any KYC verification. 
+
+### If a contestant’s entry is deleted, can they re-enter the contest?
+
+It depends on how many entries a contestant is allowed to enter in a contest. For example, if a contestant is allowed to submit two entries, then they can delete their first and still enter a second. However, if they were only allowed to submit one entry, then they will not be allowed to re-enter after deleting their entry. For this reason, we recommend letting contestants enter twice, just in case they need to delete and re-enter.
+
+### What happens if the total number of entries in my contest changes?
+
+If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be submitted.
 
 ### If a submission is deleted can it receive rewards?
 
