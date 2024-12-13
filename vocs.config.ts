@@ -10,6 +10,10 @@ export default defineConfig({
       link: '/',
     },
     {
+      text: 'Our Team',
+      link: '/our-team',
+    },
+    {
       text: 'Frequently Asked Questions',
       link: '/faq',
     },
