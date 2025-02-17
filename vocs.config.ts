@@ -47,6 +47,10 @@ export default defineConfig({
           text: 'Circuits',
           link: '/technical-how-tos/circuits',
         },
+        {
+          text: 'Troubleshooting',
+          link: '/technical-how-tos/troubleshooting',
+        },
       ]
     },
   ],
