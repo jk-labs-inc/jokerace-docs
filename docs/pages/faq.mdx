@@ -4,7 +4,7 @@
 
 ### What is a contest?
 
-A contest is just a way for people to submit entries and people to vote on their favorites. Every contest includes two periods: a submission period and a voting period. The participants in each might be totally different, exactly the same, or subsets of each other—you have complete control to decide who can submit and who can vote. You can define the addresses that can submit or vote—or let anyone submit or vote (in the latter case, they'll just need to pay per vote to avoid botting).
+A contest is just a way for people to submit entries and people to vote on their favorites. Every contest includes two periods: an entry period and a voting period. The participants in each might be totally different, exactly the same, or subsets of each other—you have complete control to decide who can enter and who can vote. You can define the addresses that can enter or vote—or let anyone enter or vote (in the latter case, they'll just need to pay per vote to avoid botting).
 
 After you create a contest, you can add and fund an optional rewards pool too. The rewards pool is set up proportionately—for example, you might offer 60% of rewards to 1st place, 30% to 2nd, 10% to 3rd—and anyone can execute the transaction to send any rewards in the pool to the winners after the contest is over.
 
@@ -16,17 +16,17 @@ Onchain contests give you five benefits you couldn’t get offchain.
 
 1. Monetization. Monetizable contests are only possible by building onchain. There is no way to programatically offer rewards to winners offchain. And just as importantly, there is no way to monetize contests directly offchain either—whereas onchain, we can split all commissions with you 50/50 so that everyone can earn. And that’s with 0 credit card or appstore fees that you’d incur offchain. All of this means we are the only way for projects to build a viable business through contests.
 
-2. Reputation. Every vote in an onchain contest is an attestation that a submission was valuable. If Vitalik votes for you in an onchain hackathon, you have a permanent portable attestation that can get you access to communities, airdrops, and job opportunities... even if you lose the hackathon. This is why reputation is crucial as a user incentive: by participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
+2. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. If Vitalik votes for you in an onchain hackathon, you have a permanent portable attestation that can get you access to communities, airdrops, and job opportunities... even if you lose the hackathon. This is why reputation is crucial as a user incentive: by participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
 
-3. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which submitters and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
+3. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
 
-4. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning submissions or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+4. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
 
-5. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home. Or maybe most significantly, let submitters know they can (and often do) create their own incentives for voters by leveraging onchain data.
+5. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home. Or maybe most significantly, let entrants know they can (and often do) create their own incentives for voters by leveraging onchain data.
 
-### Can you delete submissions?
+### Can you delete entries?
 
-Contest creators can delete or batch delete submissions during the submission and voting periods. Nobody can delete submissions after the contest closes (after the voting period).
+Contest creators can delete or batch delete entries during the entry and voting periods. Nobody can delete entries after the contest closes (after the voting period).
 
 ### I created a contest and want to edit it. Can I update any part of it?
 
@@ -52,19 +52,19 @@ Due to smart contract limitations, you can't add a rewards pool to a contest tha
 
 Yes! See [Verifying Contracts](/technical-how-tos/verifying-contracts).
 
-### If I delete a submission, how does that affect who can submit?
+### If I delete an entry, how does that affect who can enter?
 
-If you delete a submission, it will open up one more slot for total submissions. So let’s say your contest accepts 100 submissions, and all 100 have been entered. If you delete 1, there will now be room for one more submission (assuming the submission period is still open).
+If you delete an entry, it will open up one more slot for total entries. So let’s say your contest accepts 100 entries, and all 100 have been entered. If you delete 1, there will now be room for one more entry (assuming the entry period is still open).
 
-However, the person whose submission you deleted does not get a bonus submission as a result. So if you only let each wallet enter one submission, the player whose submission was deleted cannot enter another submission from that wallet.
+However, the person whose entry you deleted does not get a bonus entry as a result. So if you only let each wallet enter one entry, the player whose entry was deleted cannot enter another entry from that wallet.
 
-### I want to input the submissions myself for everyone to vote on—what’s the best way to do this?
+### I want to input the entries myself for everyone to vote on—what’s the best way to do this?
 
-First, when you create the contest, just allowlist yourself to submit entries. You can do this by selecting “manual entry” for the submission allowlist, and just copy-pasting your address in the top row.
+First, when you create the contest, just allowlist yourself to enter. You can do this by selecting “manual entry” for the entry allowlist, and just copy-pasting your address in the top row.
 
-Second, when you’re creating the contest, just make sure that submitters (ie you) can submit enough entries. On the “customizations” page, tap the “max” button under “how many submissions can each player enter?” This will let you submit as many entries as you like.
+Second, when you’re creating the contest, just make sure that entrants (ie you) can enter enough entries. On the “customizations” page, tap the “max” button under “how many entries can each player enter?” This will let you enter as many entries as you like.
 
-Please note, we don’t typically recommend submitting entries yourself. You’ll need to pay to submit them on major chains, and the submitters won’t get onchain reputation or rewards. But it remains an option if you’re in a hurry.
+Please note, we don’t typically recommend entering yourself. You’ll need to pay to enter on major chains, and the entrants won’t get onchain reputation or rewards. But it remains an option if you’re in a hurry.
 
 ### Can voters vote once or multiple times?
 
@@ -78,7 +78,7 @@ You can see the comprehensive list of chains we're live on [here](https://github
 
 We feature top legitimate ones on our front page. But if you’re concerned, you can check any user’s profile to see the previous contests they deployed to see the traction they’ve gotten and onchain rewards they offered (and by extension, whether they were legitimate). Projects themselves will typically feature links to contests as well, so you can verify here too.
 
-If for any reason you are concerned about the legitimacy of a contest, please feel free to reach out, and remember that the risk you face is simply in lost fees for submitting or voting in the contest. For that reason, however, we encourage you *never* to send funds to a rewards pool that isn’t your own.
+If for any reason you are concerned about the legitimacy of a contest, please feel free to reach out, and remember that the risk you face is simply in lost fees for enterting or voting in the contest. For that reason, however, we encourage you *never* to send funds to a rewards pool that isn’t your own.
 
 ### What are fields?
 
@@ -97,15 +97,15 @@ Here’s a few examples of how you could build new use cases on top of fields:
 - **Nominating someone to win a prize**: You could hold a contest for anyone to nominate a winner who would earn a prize. Just add a field for players to give the nominee's address, and then easily send rewards to the nominee directly, rather than to the entrant who nominated them.
 
 
-- **Raising funds for a cause**: Let's say you want to raise funds for a nonprofit—but have no money. You could throw a contest for people to nominate a nonprofit by giving its address. And you could then collect submission and voting fees from the contest itself and send these to the winner. The contest itself would fund the donation.
+- **Raising funds for a cause**: Let's say you want to raise funds for a nonprofit—but have no money. You could throw a contest for people to nominate a nonprofit by giving its address. And you could then collect entry and voting fees from the contest itself and send these to the winner. The contest itself would fund the donation.
 
 
 - **Making money from publicly-chosen awards**: Now let's say you want to make money while letting the public pick who earns an award, gets to speak at a conference, gets to appear on your podcast, etc. You can let anyone nominate a speaker, and add a field to collect their address. You could then keep the funds from the contest but give credentials to all the nominated winners.
 
 
-- **Managing a treasury**: Contest entrants could describe their proposed treasury management system and submit a field with an associated contract address. The contract for the winner could be executed, fully onchain.
+- **Managing a treasury**: Contest entrants could describe their proposed treasury management system and enter a field with an associated contract address. The contract for the winner could be executed, fully onchain.
 
-More advanced and abstract games are possible too. What about a contest to decide how many winners should earn the contest’s own rewards? Each entrant could submit a number in a field, with fee splits from entries and voting going into a separate onchain rewards pool. The rewards would then be divided among the top x winners, where x is the number proposed in the winning entry.
+More advanced and abstract games are possible too. What about a contest to decide how many winners should earn the contest’s own rewards? Each entrant could enter a number in a field, with fee splits from entries and voting going into a separate onchain rewards pool. The rewards would then be divided among the top x winners, where x is the number proposed in the winning entry.
 
 Basically, you can build smart contracts on top of contests to execute *any* kind of logic involving strings, numbers, and addresses, in order to determine allocations, funding, reputation, etc.
 
@@ -127,7 +127,7 @@ But it’s not the only option. If you want to allowlist based on other criteria
 
 ### How many addresses can I allowlist?
 
-Up to 100,000 addresses can be allowlisted for both submission and voting. You can also let anyone submit entries to your contest or vote on entries in your contest if you like.
+Up to 100,000 addresses can be allowlisted for both entry and voting. You can also let anyone enter to your contest or vote on entries in your contest if you like.
 
 ### Can you allowlist with ENS?
 
@@ -139,9 +139,9 @@ No, all components of the contest, including the allowlist, must be decided when
 
 ### I’m allowlisting addresses that I got from one chain, but I’m deploying my contest to a different chain. Will these addresses work across different chains?
 
-Yes—with the exception of multisigs. Individual users with hard or soft wallets can use the same accounts on all EVM chains, so if you allowlist one address that you got on one chain, that person will be able to submit or vote on whatever chain you use for your contest. This means you could effectively allowlist token holders on Ethereum Mainnet but have them perform governance entirely on Berachain, for example.
+Yes—with the exception of multisigs. Individual users with hard or soft wallets can use the same accounts on all EVM chains, so if you allowlist one address that you got on one chain, that person will be able to enter or vote on whatever chain you use for your contest. This means you could effectively allowlist token holders on Ethereum Mainnet but have them perform governance entirely on Berachain, for example.
 
-The one exception is multisigs, aka multisignature wallets that are controlled by multiple addresses. These address are not transferable across chains. So if you allowlist a multisig from Ethereum Mainnet for a contest on Berachain, they *won’t* be able to use this address to submit or vote.
+The one exception is multisigs, aka multisignature wallets that are controlled by multiple addresses. These address are not transferable across chains. So if you allowlist a multisig from Ethereum Mainnet for a contest on Berachain, they *won’t* be able to use this address to enter or vote.
 
 Multisigs are, however, the exception, not the rule.
 
@@ -153,15 +153,15 @@ Unfortunately, there’s no way to query multiple chains at once, so you can onl
 
 Due to API limitations, the presets only support the chains that you see listed when you select a token.
 
-However, the presets just help you save time, and you can always manually allowlist whoever you want. If you’re looking to allowlist tokens on another chain, we recommend going to that chain’s block explorer, looking up the contract for the token, tapping the “holders” tab (or equivalent), and downloading a spreadsheet of the holders. You can then put this into a new spreadsheet with voters in column A and voting power in column B (or in the case of submissions, just submitters in column A). Just export this spreadsheet as a csv and upload it when you create a contest under the appropriate allowlist page.
+However, the presets just help you save time, and you can always manually allowlist whoever you want. If you’re looking to allowlist tokens on another chain, we recommend going to that chain’s block explorer, looking up the contract for the token, tapping the “holders” tab (or equivalent), and downloading a spreadsheet of the holders. You can then put this into a new spreadsheet with voters in column A and voting power in column B (or in the case of entries, just entrants in column A). Just export this spreadsheet as a csv and upload it when you create a contest under the appropriate allowlist page.
 
 ## Monetization
 
 ### How can I monetize from creating contests?
 
-On the final page of creating a contest, you can set monetization options to charge players for submitting and voting. JokeRace splits these fees with you 50/50, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality submissions and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
+On the final page of creating a contest, you can set monetization options to charge players for enterting and voting. JokeRace splits these fees with you 50/50, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality entries and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
 
-So for example, let’s say you want to create a game show that runs each week. You might start by having relatively low submission fees with low rewards. The next week, you might take your earnings from submissions and put them into a slightly higher rewards pool—justifying a slightly higher submission fee. Rinse, repeat, and over time you can raise rates sustainably.
+So for example, let’s say you want to create a game show that runs each week. You might start by having relatively low entry fees with low rewards. The next week, you might take your earnings from entries and put them into a slightly higher rewards pool—justifying a slightly higher entry fee. Rinse, repeat, and over time you can raise rates sustainably.
 
 This is only one option for monetizing. Other communities may want to use contests to give utility to their token or to leverage the data from the contests to get sponsors attuned with their users. Still others might want to get sponsors for the rewards and take a cut.
 
@@ -169,16 +169,16 @@ There are endless ways to monetize contests, some natively on JokeRace’s site,
 
 ### What type of contests do JokeRace frames currently support?
 
-JokeRace frames currently support contests that are anyone can submit or anyone can vote. If your contest is anyone can submit, then you can use frames for the submission portion of your contest; if your contest is anyone can vote, then you can use frames for the voting portion of your contest; and if your contest is anyone can submit and anyone can vote, then you can use frames for every portion of your contest.
+JokeRace frames currently support contests that are anyone can enter or anyone can vote. If your contest is anyone can enter, then you can use frames for the entry portion of your contest; if your contest is anyone can vote, then you can use frames for the voting portion of your contest; and if your contest is anyone can enter and anyone can vote, then you can use frames for every portion of your contest.
 
-### What can I submit to a frame?
+### What can I enter to a frame?
 
-Frames currently only accept text-based submissions. If you would like to submit media, pleast submit a link to wherever it is being hosted.
+Frames currently only accept text-based entries. If you would like to enter media, pleast enter a link to wherever it is being hosted.
 
 ### How do I make a frame?
 
-- If you'd like to share a submission frame, all you need to do is cast the link to the contest you'd like to share the frame for and it will auto-populate in Warpcast!
-- If you'd like to share a voting frame, all you need to do is cast the link to the submission you'd like people to be able to vote with the frame on and it will auto-populate in Warpcast!
+- If you'd like to share an entry frame, all you need to do is cast the link to the contest you'd like to share the frame for and it will auto-populate in Warpcast!
+- If you'd like to share a voting frame, all you need to do is cast the link to the entry you'd like people to be able to vote with the frame on and it will auto-populate in Warpcast!
 
 ## Extensions
 
@@ -212,9 +212,9 @@ Current extensions include:
 Potential future extensions could include:
 
 - Minting winning entries as NFTs
-- Deploying capital with parameters set by the winning submission
+- Deploying capital with parameters set by the winning entry
 - Buying back tokens with the fees accrued by the contest
-- Resubmitting fees from contest into rewards
+- Reenterting fees from contest into rewards
 - Slashing node operators based on the vote of a contest
 - Adding winners to a multisig
 - Revoking membership in a community
@@ -223,7 +223,7 @@ Potential future extensions could include:
 
 ## Troubleshooting
 
-### I can’t submit or vote even though I should be allowlisted—what’s happening?
+### I can’t enter or vote even though I should be allowlisted—what’s happening?
 
 Go to “Parameters” on the contest page, download the allowlist, and make sure your address was on it. If not, please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
 
@@ -259,15 +259,15 @@ If you want to KYC players, we recommend adding a field for contestants to respo
 
 ### If a contestant’s entry is deleted, can they re-enter the contest?
 
-It depends on how many entries a contestant is allowed to enter in a contest. For example, if a contestant is allowed to submit two entries, then they can delete their first and still enter a second. However, if they were only allowed to submit one entry, then they will not be allowed to re-enter after deleting their entry. For this reason, we recommend letting contestants enter twice, just in case they need to delete and re-enter.
+It depends on how many entries a contestant is allowed to enter in a contest. For example, if a contestant is allowed to enter two entries, then they can delete their first and still enter a second. However, if they were only allowed to enter one entry, then they will not be allowed to re-enter after deleting their entry. For this reason, we recommend letting contestants enter twice, just in case they need to delete and re-enter.
 
 ### What happens if the total number of entries in my contest changes?
 
-If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be submitted.
+If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be enterted.
 
-### If a submission is deleted can it receive rewards?
+### If an entry is deleted can it receive rewards?
 
-No, deleted submissions cannot earn rewards—they will be disqualified and other entries will take their place in the ranking in the contest. Please note that submissions can only be deleted while the contest is running (not after).
+No, deleted entries cannot earn rewards—they will be disqualified and other entries will take their place in the ranking in the contest. Please note that entries can only be deleted while the contest is running (not after).
 
 ### Do rewards in the rewards pool need to be ERC-20s on the same chain as the contest?
 
@@ -278,7 +278,7 @@ Yes. If you want to reward ERC-20s from another chain, please bridge them over t
 Yes. If you want to reward ERC-20s from another chain, please bridge them over to the same chain as the contest first, and then use them to fund the pool. If you want to reward NFTs, you can do so manually by sending them directly to the winners. 
 
 ## Circuits
-Circuits are a mechanism for contest creators to direct earnings to independent smart contracts that perform onchain transactions. That means that whenever a player in a contest submits, votes, or performs any kind of action generating earnings, they can simultaneously perform any onchain action, such as buying tokens, minting collectibles, providing liquidity, or earning credentials—all as part of playing in a contest.
+Circuits are a mechanism for contest creators to direct earnings to independent smart contracts that perform onchain transactions. That means that whenever a player in a contest enters, votes, or performs any kind of action generating earnings, they can simultaneously perform any onchain action, such as buying tokens, minting collectibles, providing liquidity, or earning credentials—all as part of playing in a contest.
 
 Check out the [technical documentation page](/technical-how-tos/circuits) for more in-depth information.
 
@@ -286,7 +286,7 @@ Check out the [technical documentation page](/technical-how-tos/circuits) for mo
 
 ### How can I use JokeRace for points and reputation?
 
-One easy way to imagine JokeRace is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has submitted an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
+One easy way to imagine JokeRace is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has enterted an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
 
 What this means is that even if you lose a contest, you still win—because you’re earning reputation. For example, if a community designed a simple point system that offered one “point” for every vote a person received, they would be able to gauge the value that this person had contributed to the community—by merely adding up the onchain votes over time. With a legitimate voterpool, this system couldn’t be botted or overrun by airdrop farmers. Submitters would actually have to create value for the community to earn value in return. 
 
@@ -306,19 +306,19 @@ Even then, contest creators have the option whether or not to add a rewards pool
 
 While quests platforms are quite good at getting a large quantity of users and bots to perform the same action, contests are good for getting quality users to compete with original entries.
 
-And this is why quests and contests can be complementary. For example, you might just allowlist anyone to submit or vote who’s performed a quest—incentivizing them to perform the quest in order to participate in the contest for greater rewards. Or you might create a quest to incentivize people to submit or vote in a contest to increase engagement. Finally, you might use the metrics from a contest to determine who your quality users are—for example, giving one “point” for each vote that submitters have gotten across your contests. You could then use these metrics to allowlist future quests to prevent bots from participating.
+And this is why quests and contests can be complementary. For example, you might just allowlist anyone to enter or vote who’s performed a quest—incentivizing them to perform the quest in order to participate in the contest for greater rewards. Or you might create a quest to incentivize people to enter or vote in a contest to increase engagement. Finally, you might use the metrics from a contest to determine who your quality users are—for example, giving one “point” for each vote that entrants have gotten across your contests. You could then use these metrics to allowlist future quests to prevent bots from participating.
 
-### I’ve already collected applications, nominations, or submissions from another site. Is there a way to import them into a contest for others to vote on?
+### I’ve already collected applications, nominations, or entries from another site. Is there a way to import them into a contest for others to vote on?
 
-You can always set up a contest that only you submit into—if you like, you can even allowlist the submissions so that only you can submit.
+You can always set up a contest that only you enter into—if you like, you can even allowlist the entries so that only you can enter.
 
-However, we strongly recommend letter users submit directly to get the full benefits of onchain contests, including:
+However, we strongly recommend letter users enter directly to get the full benefits of onchain contests, including:
 
 Onchain reputation (ie every vote they get could be a point attesting to value of their project)
 Rewards for winners onchain
-Monetization (you can set submission fees that we split with you 50/50)
+Monetization (you can set entry fees that we split with you 50/50)
 
-If you do choose to submit directly, you’ll need to cover the submission fees for the contest yourself and will lose the advantages above.
+If you do choose to enter directly, you’ll need to cover the entry fees for the contest yourself and will lose the advantages above.
 
 ### How can a contest fund itself?
 
@@ -362,7 +362,7 @@ Notes:
 
 The dashboard shows:
 - Total revenue
-- Number of entries and entry submitters
+- Number of entries and entrants
 - Number of votes and unique voters
 - Entry IDs and voter addresses
 - Proposer addresses
