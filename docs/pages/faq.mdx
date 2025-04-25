@@ -30,23 +30,11 @@ Contest creators can delete or batch delete entries during the entry and voting 
 
 ### I created a contest and want to edit it. Can I update any part of it?
 
-You cannot currently edit contests, but you can set your contest to unlisted (go to your user profile in the upper right and tap the eye icon next to the contest), then redeploy a new contest.
+You can edit the header image, title and description of your contest. If you need to update anything else you can cancel the contest then redeploy a new one.
 
 ### How do I find the contract address for a contest?
 
-Copy the url of the contest. The last string of letters and numbers is the contract address. Every url is formatted as follows: `www.jokerace.io/contest/[chain]/[contract-address]`
-
-### Can I delete a contest?
-
-Contests can’t be deleted.
-
-However, the contest creator can set the contest to unlisted and remove it from the rewards pool. To set it to unlisted, go to your user profile, and tap the “eye” icon. Unlisted contests can still be found at the same url and on the profile of the contest creator (as well as on the blockchain itself), but otherwise will be unlisted on the site.
-
-### How does downvoting work?
-
-If you enable downvoting, a downvote will operate the same way as a normal upvote in terms of fees. That is, if you set the contest for people to pay per vote, they'd pay for a downvote just as they would for an upvote.
-
-Due to smart contract limitations, you can't add a rewards pool to a contest that has downvoting enabled. So if you want to reward winners with our rewards pool, you should *not* turn on downvoting.
+Copy the url of the contest. The last string of letters and numbers is the contract address. Every url is formatted as follows: www.jokerace.io/contest/[chain]/[contract-address]
 
 ### Can I verify this contract?
 
@@ -167,19 +155,6 @@ This is only one option for monetizing. Other communities may want to use contes
 
 There are endless ways to monetize contests, some natively on JokeRace’s site, and some off-site as well.
 
-### What type of contests do JokeRace frames currently support?
-
-JokeRace frames currently support contests that are anyone can enter or anyone can vote. If your contest is anyone can enter, then you can use frames for the entry portion of your contest; if your contest is anyone can vote, then you can use frames for the voting portion of your contest; and if your contest is anyone can enter and anyone can vote, then you can use frames for every portion of your contest.
-
-### What can I enter to a frame?
-
-Frames currently only accept text-based entries. If you would like to enter media, pleast enter a link to wherever it is being hosted.
-
-### How do I make a frame?
-
-- If you'd like to share an entry frame, all you need to do is cast the link to the contest you'd like to share the frame for and it will auto-populate in Warpcast!
-- If you'd like to share a voting frame, all you need to do is cast the link to the entry you'd like people to be able to vote with the frame on and it will auto-populate in Warpcast!
-
 ## Extensions
 
 ### What are extensions?
@@ -205,8 +180,8 @@ Not all extensions should look the same, however. We want JokeRace to be able to
 
 Current extensions include:
 
+- Viewing contest analytics on Dune
 - Assigning roles and powers to winners of contests with Hats Protocol
-- Generating insights about players based on their onchain histories with Bello
 - Rewarding winners NFTs with Coinvise
 
 Potential future extensions could include:
@@ -231,19 +206,15 @@ Go to “Parameters” on the contest page, download the allowlist, and make sur
 
 ### Can I withdraw funds from a rewards pool I created?
 
-Yes, the contest creator can always withdraw rewards from the rewards pool, but keep in mind legal liability if you’ve promised rewards to winners.
+Yes, the contest creator can always withdraw rewards from the rewards pool, but keep in mind legal liability if you’ve promised rewards to winners. You will also have to cancel the rewards pool before you can withdraw from it.
 
 ### Can I withdraw funds from a rewards pool I funded?
 
 Only contest creators can withdraw funds of the associated rewards pool. If you are not the contest creator, we highly recommend that you do not fund a rewards pool, as there is no way for you to withdraw funds.
 
-### What happens in the case of a tie?
+### How does funding the rewards pool work?
 
-In the case of a tie, all funds will be reverted to the contest creator to distribute manually.
-
-### How does funding the prize pool work?
-
-You can fund the prize pool on the “rewards” page or sending ERC20s directly to the contract address on the rewards page.
+You can fund the rewards pool on the “rewards” page or sending ERC20s directly to the contract address on the rewards page.
 
 ### Who is responsible for KYC verification in contests?
 
@@ -277,6 +248,28 @@ Yes. If you want to reward ERC-20s from another chain, please bridge them over t
 
 Yes. If you want to reward ERC-20s from another chain, please bridge them over to the same chain as the contest first, and then use them to fund the pool. If you want to reward NFTs, you can do so manually by sending them directly to the winners. 
 
+### What happens in the case of a tie?
+
+Ties are complicated!
+
+That's why in the case of ties, the funds for the potential winners get disbursed back to the creator to make a call and handle manually.
+
+**How and when rewards return to contest creator:**
+All affected ranks will have their rewards returned to the contest creator. that includes any ranks that incurred a tie, as well as any ranks below. For example, if the contest has rewards set for 1st, 2nd and 3rd place, but multiple contestants tied for 2nd, then only the reward funds that were on hold for 2nd and 3rd will be returned to the contest creator.
+
+We recommend including your own policy for ties in your contest description to share with players. If you're looking for a specific policy, you’re welcome to copy-paste our own policy we use when we run contests.
+
+“In the case that x players are tied for a given rank, they will get an equal share of the sum of rewards for that rank and the (x-1) ranks that follow it distributed among them. for example, if 3 players tie for 2nd place, they will get the shares of 2nd-4th place distributed among all three equally, and the 3rd place winner would now get 5th place.
+
+In the case where there are more tied players than remaining ranks, they will get the remainder of rewards distributed to them. for example, if 3 players tie for 2nd place, but only the top 3 ranks get rewards, then these 3 players will split the sum of rewards from 2nd and 3rd place equally.”
+
+You're welcome to follow any policy you like, but we use this one because it sticks as closely as possible to the original intention of rewards, in which the ranks should correspond to the total number of players (or be shared evenly at the bottom).
+
+In other words, if we accounted for 5 winners with 5 ranks, then our goal is to try to have those rewards go to the top 5 winners… or to split them if there's a tie at the bottom.
+
+You can see what that looks like in a case where two players tie for 3rd, and two tie for 4th:
+![Tie Explainer](/tie-explainer.png)
+
 ## Circuits
 Circuits are a mechanism for contest creators to direct earnings to independent smart contracts that perform onchain transactions. That means that whenever a player in a contest enters, votes, or performs any kind of action generating earnings, they can simultaneously perform any onchain action, such as buying tokens, minting collectibles, providing liquidity, or earning credentials—all as part of playing in a contest.
 
@@ -286,13 +279,17 @@ Check out the [technical documentation page](/technical-how-tos/circuits) for mo
 
 ### How can I use JokeRace for points and reputation?
 
-One easy way to imagine JokeRace is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has enterted an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
+One easy way to imagine JokeRace is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has entered an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
 
-What this means is that even if you lose a contest, you still win—because you’re earning reputation. For example, if a community designed a simple point system that offered one “point” for every vote a person received, they would be able to gauge the value that this person had contributed to the community—by merely adding up the onchain votes over time. With a legitimate voterpool, this system couldn’t be botted or overrun by airdrop farmers. Submitters would actually have to create value for the community to earn value in return. 
+What this means is that even if you lose a contest, you still win—because you’re earning reputation. For example, if a community designed a simple point system that offered one “point” for every vote a person received, they would be able to gauge the value that this person had contributed to the community—by merely adding up the onchain votes over time. With a legitimate voterpool, this system couldn’t be botted or overrun by airdrop farmers. Submitters would actually have to create value for the community to earn value in return.
 
-But this is just one example. In fact, because JokeRace is fully onchain, you can use any data point from contests to determine your own system of rewarding reputation. We actually created a Flipside dashboard you can use if you want to input your contest [here](https://flipsidecrypto.xyz/0xd698e31229aB86334924ed9DFfd096a71C686900/jokerace-analytics-UIs4gX).
+But this is just one example. In fact, because JokeRace is fully onchain, you can use any data point from contests to determine your own system of rewarding reputation.
 
-Some of our users have created Dune dashboards as well with queries. Feel free to fork any of these for your own use cases.
+To get analytics on your contest, tap the “extensions” tab and “see analytics” button. your contest dashboard shows you everyone who entered and voted. just pull their addresses and you can give them
+- airdrops
+- community access
+- credentials
+- reimbursements
 
 ### Is JokeRace a quests platform?
 
@@ -314,9 +311,9 @@ You can always set up a contest that only you enter into—if you like, you can 
 
 However, we strongly recommend letter users enter directly to get the full benefits of onchain contests, including:
 
-Onchain reputation (ie every vote they get could be a point attesting to value of their project)
-Rewards for winners onchain
-Monetization (you can set entry fees that we split with you 70/30)
+- Onchain reputation (ie every vote they get could be a point attesting to value of their project)
+- Rewards for winners onchain
+- Monetization (you can set entry fees that we split with you 70/30)
 
 If you do choose to enter directly, you’ll need to cover the entry fees for the contest yourself and will lose the advantages above.
 
