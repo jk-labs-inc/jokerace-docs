@@ -235,6 +235,54 @@ People who have already entered will no longer get rewards for their entries, pe
 
 Only contest creators can withdraw funds of the associated rewards pool. If you are not the contest creator, we highly recommend that you do not fund a rewards pool, as there is no way for you to withdraw funds.
 
+### What is vote-and-earn?
+Vote-and-earn means that voters can earn from voting on winning entries when you add a rewards pool for voters to a contest (contest creators can find this on the “my rewards” tab of the contest). And with price curves, voting costs rise steadily, rewarding early voters who can earn significantly higher returns as later voters drive up the pool.
+
+### What are Price curves?
+Price curves steadily increase vote prices throughout the contest, incentivizing early, high-conviction votes. Early voters benefit from significantly lower prices, higher potential returns, and rewards from all subsequent voters. This approach aligns incentives, maximizes potential returns, and enhances contest engagement.
+
+### Who pays for the rewards?
+Rewards come from the contest’s reward pool, just like for entrants. That pool can be funded by the creator, by entry and voting charges, or both. You can also configure a **self-funding** contest, where 90% of every voting fee goes directly into the pool.
+
+### How do voter rewards work?
+In contests with voter rewards enabled:
+- Voters pay to cast votes, like usual
+- **If self-funding is turned on**, 90% of each voting charge also goes into the rewards pool
+- That pool is split by placement (e.g. 80% to 1st place, 20% to 2nd)
+- With price curves, costs per vote increase continuously (e.g., 7.5% per minute), incentivizing early votes at lower prices. Early voters thus stand to earn more as subsequent voters contribute increasingly larger amounts into the pool.
+- After the contest ends, rewards are distributed to voters on the winning entry. Each voter on those winning entries earns a share **proportional to the number of votes they cast**
+- For example:
+  - Let’s assume there’s a contest where the creator sets 80% of the rewards pool to go to 1st place voters and 20% to 2nd place voters. The creator **does not** fund this pool independently but lets it self-fund.
+  - $1000 is spent on votes across the entire contest
+  - 90% ($900) goes to the rewards pool
+  - 80% of the pool goes to the 1st place entry = $720
+  - 20% goes to the 2nd place entry = $180
+  - If you cast 5 of 50 votes on the 1st place entry (10%), you earn $72
+  - *Not all contests use self-funding. Always check the contest description to confirm whether your votes contribute to the rewards pool.
+
+### Do all voters get rewarded?
+No. Only voters on the **winning entry (or entries**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more you contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
+
+### Can I still run a contest without voter rewards?
+Yes—voter rewards are optional. Contest creators can also reward contestants with winning entries, or keep the 90% of charges for themselves.  
+
+### Why does jk labs take a 10% cut of charges?
+A 10% cut helps ensure contests  are more fair and engaging. Here’s why:
+- Prevents whales from farming rewards: The 30% cut helps ensure  brute-force winning is unprofitable. It disincentivizes whales from swooping in with a large pot of money to claim 1st place and earn from everyone else’s vote, since they effectively need to pay a 30% charge on their own votes. 
+- Encourages diverse voting: Once an entry has 90% of votes (assuming only 1st place voters earn), it’s no longer profitable to continue voting on that entry, so contestantsparticipants should consider all viable options to vote on. Likewise, voters can only earn if players vote on *other* entries in order to increase the rewards pool that lets them earn more than the 10% they pay. This helps encourage everyone to help share the contest with the most diverse contestantsparticipants possible in order to maximize their own rewards. 
+
+### How does this change voter strategy?
+Voter rewards introduce real decision-making into contests. For example:
+- You want to vote on entries that can win—since only winning voters earn
+- Once an entry in a fully self-funded contest has a certain percentage of votes [90%*(percent that their rank earns)], then voters can no longer earn from it. For example, let’s say 1st place voters get 100% of the rewards pool, and the rewards pool is funded by 90% of charges. If voters pay for 1000% of votes, and only get 90% of the funds from voting, then they effectively lose. 
+- The more entries in a contest, the greater the risk and reward for players. For example, if there are two entries, then one needs 51% to win. if there are 10, then one might only need 11%. This means that the risk and reward are both much greater since you can win 90% of rewards for 11% of the vote, but of course it's less likely you will.
+
+Price Curves create significantly deeper strategy:
+- Reward Conviction: Early votes are cheaper, offering much higher risk and return, with greater rewards for voting with conviction.
+- Liquidity Flywheel: Because voters earn more from voting early, they can provide liquidity into the rewards pool that then draws more people to play, setting off a liquidity flywheel that brings in more and more players as the contest continues.
+- Virality Incentives: Earnings come from everyone voting after you, encouraging voters to persuade others to follow their choices.
+- Drama: By creating FOMO and escalating rewards, contests become much more fun as the stakes rise continuously.
+
 ### Who is responsible for KYC verification in contests?
 
 Contest creators are fully responsible for the deployment and ownership of smart contracts that handle contest rewards. This means that any KYC (Know Your Customer) requirements are up to the contest creator’s discretion and are not managed by us. It’s important that contest creators conduct their own due diligence and ensure that their KYC process aligns with any applicable regulations.
@@ -337,6 +385,8 @@ If you do choose to enter directly, you’ll need to cover the entry fees for th
 After you create a contest, you can create a rewards pool as well on the contest’s rewards page. When you create the rewards pool, just turn on the toggle on the final screen to send all earnings to the rewards pool.
 
 How does this work? Well, JokeRace split all fees from users with contest creators. So when you turn on self-funding, instead of collecting your fees, you’re choosing for them to go directly into the rewards pool. That means that 70% of all fees go back into rewards.
+
+Price curves further enhance self-funding. By incentivizing early voters to buy votes at lower prices, price curves seed the rewards pool earlier, kickstarting the participation flywheel and boosting engagement—especially useful when contest creators have limited initial funds.
 
 This is the magic of programmable money.
 
