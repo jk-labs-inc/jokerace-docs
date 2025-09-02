@@ -6,7 +6,7 @@
 
 A contest is just a way for people to submit entries and people to vote on their favorites. Every contest includes two periods: an entry period and a voting period. The participants in each might be totally different, exactly the same, or subsets of each other—you have complete control to decide who can enter and who can vote. You can define the addresses that can enter or vote—or let anyone enter or vote (in the latter case, they'll just need to pay per vote to avoid botting).
 
-After you create a contest, you can add and fund an optional rewards pool too. The rewards pool is set up proportionately—for example, you might offer 60% of rewards to 1st place, 30% to 2nd, 10% to 3rd—and anyone can execute the transaction to send any rewards in the pool to the winners after the contest is over.
+After you create a contest, you can add and fund an optional rewards pool too. The rewards pool is set up proportionately—for example, you might offer 60% of rewards to voters on 1st place, 30% to voters on 2nd, 10% to voters on 3rd—and anyone can execute the transaction to send any rewards in the pool to the rewarded voters after the contest is over.
 
 Popular contest use cases include grants, hackathons, governance, bounties, ideathons, giveaways, awards ceremonies, best meme/tweet/essay competitions, feature requests, polls, game shows, etc. etc. Any kind of community decision is, effectively, a contest.
 
@@ -24,13 +24,13 @@ There’s no need to rely on external apps to manage your funds. There’s no ne
 See the full list of supported chains [here](https://help.coinbase.com/en/wallet/getting-started/what-types-of-crypto-does-wallet-support)
 
 ### How do I claim my funds when I win?
-Just go to "my rewards" tab and you'll see a button to claim rewards for each entry that won. Unless there's a tie, in which case these go to the contest creator to distribute, and you should reach out to them.
+Just go to "my rewards" tab and you'll see a button to claim rewards for each entry you voted on that won. Unless there's a tie, in which case these go to the contest creator to distribute, and you should reach out to them.
 
 ### Why is JokeRace onchain?
 
 Onchain contests give you five benefits you couldn’t get offchain.
 
-1. Monetization. Monetizable contests are only possible by building onchain. There is no way to programatically offer rewards to winners offchain. And just as importantly, there is no way to monetize contests directly offchain either—whereas onchain, we can split all commissions with you 70/10 so that everyone can earn. And that’s with 0 credit card or appstore fees that you’d incur offchain. All of this means we are the only way for projects to build a viable business through contests.
+1. Monetization. Monetizable contests are only possible by building onchain. There is no way to programatically offer rewards to voters offchain. And just as importantly, there is no way to monetize contests directly offchain either—whereas onchain, we can split all commissions with you 90/10 so that everyone can earn. And that’s with 0 credit card or appstore fees that you’d incur offchain. All of this means we are the only way for projects to build a viable business through contests.
 
 2. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. If Vitalik votes for you in an onchain hackathon, you have a permanent portable attestation that can get you access to communities, airdrops, and job opportunities... even if you lose the hackathon. This is why reputation is crucial as a user incentive: by participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
 
@@ -67,8 +67,6 @@ However, the person whose entry you deleted does not get a bonus entry as a resu
 First, when you create the contest, just allowlist yourself to enter. You can do this by selecting “manual entry” for the entry allowlist, and just copy-pasting your address in the top row.
 
 Second, when you’re creating the contest, just make sure that entrants (ie you) can enter enough entries. On the “customizations” page, tap the “max” button under “how many entries can each player enter?” This will let you enter as many entries as you like.
-
-Please note, we don’t typically recommend entering yourself. You’ll need to pay to enter on major chains, and the entrants won’t get onchain reputation or rewards. But it remains an option if you’re in a hurry.
 
 ### Can voters vote once or multiple times?
 
@@ -108,8 +106,6 @@ Here’s a few examples of how you could build new use cases on top of fields:
 
 
 - **Managing a treasury**: Contest entrants could describe their proposed treasury management system and enter a field with an associated contract address. The contract for the winner could be executed, fully onchain.
-
-More advanced and abstract games are possible too. What about a contest to decide how many winners should earn the contest’s own rewards? Each entrant could enter a number in a field, with fee splits from entries and voting going into a separate onchain rewards pool. The rewards would then be divided among the top x winners, where x is the number proposed in the winning entry.
 
 Basically, you can build smart contracts on top of contests to execute *any* kind of logic involving strings, numbers, and addresses, in order to determine allocations, funding, reputation, etc.
 
@@ -163,7 +159,7 @@ However, the presets just help you save time, and you can always manually allowl
 
 ### How can I monetize from creating contests?
 
-On the final page of creating a contest, you can set monetization options to charge players for enterting and voting. JokeRace splits these fees with you 70/10, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality entries and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
+On the final page of creating a contest, you can set monetization options to charge players for enterting and voting. JokeRace splits these fees with you 90/10, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality entries and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
 
 So for example, let’s say you want to create a game show that runs each week. You might start by having relatively low entry fees with low rewards. The next week, you might take your earnings from entries and put them into a slightly higher rewards pool—justifying a slightly higher entry fee. Rinse, repeat, and over time you can raise rates sustainably.
 
@@ -376,7 +372,7 @@ However, we strongly recommend letter users enter directly to get the full benef
 
 - Onchain reputation (ie every vote they get could be a point attesting to value of their project)
 - Rewards for winners onchain
-- Monetization (you can set entry fees that we split with you 70/10)
+- Monetization (you can set entry fees that we split with you 90/10)
 
 If you do choose to enter directly, you’ll need to cover the entry fees for the contest yourself and will lose the advantages above.
 
@@ -384,7 +380,7 @@ If you do choose to enter directly, you’ll need to cover the entry fees for th
 
 After you create a contest, you can create a rewards pool as well on the contest’s rewards page. When you create the rewards pool, just turn on the toggle on the final screen to send all earnings to the rewards pool.
 
-How does this work? Well, JokeRace split all fees from users with contest creators. So when you turn on self-funding, instead of collecting your fees, you’re choosing for them to go directly into the rewards pool. That means that 70% of all fees go back into rewards.
+How does this work? Well, JokeRace split all fees from users with contest creators. So when you turn on self-funding, instead of collecting your fees, you’re choosing for them to go directly into the rewards pool. That means that 90% of all fees go back into rewards.
 
 Price curves further enhance self-funding. By incentivizing early voters to buy votes at lower prices, price curves seed the rewards pool earlier, kickstarting the participation flywheel and boosting engagement—especially useful when contest creators have limited initial funds.
 
@@ -398,7 +394,7 @@ But second, this creates a flywheel. The more people that participate, the highe
 
 Third, it adds extra incentives for entrants to get as many votes as possible. The more people that vote for them, the more money they stand to earn—and the more likely they are to win. This can create dynamic competitions with players.
 
-Finally, in anyone-can-vote-contests, it can help prevent arbitrage opportunities that accompany traditional rewards. For example, in an externally funded contest, players may be incentivized to buy up votes in order to get the rewards. If the prize pool is $500, for example, they may want to spend hundreds of dollars to try to win in order to earn. This can be a very fun game of its own, but self-funding helps avoid it. Since users only get back 70% of what they put in, they’re much less incentivized to try to arbitrage a prize pool (since even if it’s quite large, that’s likely due to voting on other entries). 
+Finally, in anyone-can-vote-contests, it can help prevent arbitrage opportunities that accompany traditional rewards. For example, in an externally funded contest, players may be incentivized to buy up votes in order to get the rewards. If the prize pool is $500, for example, they may want to spend hundreds of dollars to try to win in order to earn. This can be a very fun game of its own, but self-funding helps avoid it. Since users only get back 90% of what they put in, they’re much less incentivized to try to arbitrage a prize pool (since even if it’s quite large, that’s likely due to voting on other entries). 
 
 ## AI Agents
 
