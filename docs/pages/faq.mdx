@@ -10,6 +10,20 @@ After you create a contest, you can add and fund an optional rewards pool too. T
 
 Popular contest use cases include grants, hackathons, governance, bounties, ideathons, giveaways, awards ceremonies, best meme/tweet/essay competitions, feature requests, polls, game shows, etc. etc. Any kind of community decision is, effectively, a contest.
 
+### How do voter rewards work?
+- Voters pay to cast votes
+- 90% of each voting charge also goes into the rewards pool
+- That pool is split by placement (e.g. 80% to 1st place, 20% to 2nd)
+- With price curves, costs per vote increase continuously (e.g., 7.5% per minute), incentivizing early votes at lower prices. Early voters thus stand to earn more as subsequent voters contribute increasingly larger amounts into the pool.
+- After the contest ends, rewards are distributed to voters on the winning entry. Each voter on those winning entries earns a share **proportional to the number of votes they cast**
+- For example:
+  - Let’s assume there’s a contest where the creator sets 80% of the rewards pool to go to 1st place voters and 20% to 2nd place voters. The creator **does not** fund this pool independently but lets it self-fund.
+  - $1000 is spent on votes across the entire contest
+  - 90% ($900) goes to the rewards pool
+  - 80% of the pool goes to the 1st place entry = $720
+  - 20% goes to the 2nd place entry = $180
+  - If you cast 5 of 50 votes on the 1st place entry (10%), you earn $72
+
 ### Do I need a crypto experience to play in a contest on JokeRace?
 No, Para allows anyone to join JokeRace contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
 
@@ -193,22 +207,8 @@ Price curves steadily increase vote prices throughout the contest, incentivizing
 ### Who pays for the rewards?
 Rewards come from the contest’s reward pool. That pool is funded by voting charges and the creator can also add to it directly as well.
 
-### How do voter rewards work?
-- Voters pay to cast votes, like usual
-- 90% of each voting charge also goes into the rewards pool
-- That pool is split by placement (e.g. 80% to 1st place, 20% to 2nd)
-- With price curves, costs per vote increase continuously (e.g., 7.5% per minute), incentivizing early votes at lower prices. Early voters thus stand to earn more as subsequent voters contribute increasingly larger amounts into the pool.
-- After the contest ends, rewards are distributed to voters on the winning entry. Each voter on those winning entries earns a share **proportional to the number of votes they cast**
-- For example:
-  - Let’s assume there’s a contest where the creator sets 80% of the rewards pool to go to 1st place voters and 20% to 2nd place voters. The creator **does not** fund this pool independently but lets it self-fund.
-  - $1000 is spent on votes across the entire contest
-  - 90% ($900) goes to the rewards pool
-  - 80% of the pool goes to the 1st place entry = $720
-  - 20% goes to the 2nd place entry = $180
-  - If you cast 5 of 50 votes on the 1st place entry (10%), you earn $72
-
 ### Do all voters get rewarded?
-No. Only voters on the **winning entry (or entries)**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more you contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
+No. Only voters on the **winning entry (or entries)**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more voters contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
 
 ### Why does jk labs take a 10% cut of charges?
 A 10% cut helps ensure contests  are more fair and engaging. Here’s why:
