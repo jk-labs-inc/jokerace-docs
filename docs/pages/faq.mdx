@@ -111,50 +111,6 @@ Basically, you can build smart contracts on top of contests to execute *any* kin
 
 All of this can be done programmatically on [top of our contest smart contracts](https://docs.jokerace.io/technical-how-tos/jokerace-onchain-data).
 
-## Allowlists
-
-### What kind of allowlists are possible?
-
-You can allowlist any onchain addresses you want, so you can get creative. Ultimately you can just place the addresses in column A of a CSV, the voting power in column B, and upload to our site when you create a contest. So you have full freedom to determine criteria however you want.
-
-Want to save time? We’ve built some presets so that you can just drop the address of an NFT or token, and we’ll allowlist all the voters—no CSV required.
-
-### So token-voting is possible?
-
-Absolutely! Token-voting is the easiest option: just drop the token address, and the holders will be allowlisted.
-
-But it’s not the only option. If you want to allowlist based on other criteria, you can handle however you like—as long as you have a list of addresses to share.
-
-### How many addresses can I allowlist?
-
-Up to 100,000 addresses can be allowlisted for both entry and voting. You can also let anyone enter to your contest or vote on entries in your contest if you like.
-
-### Can you allowlist with ENS?
-
-ENS is not currently compatible with allowlists. If you’re manually uploading an allowlist, make sure that all addresses are written out alphanumerically, beginning with “0x”.
-
-### Is there a way to capture the allowlist at a later point after the contest is launched?
-
-No, all components of the contest, including the allowlist, must be decided when the contest is created. This is because each contest is a smart contract that you’re deploying to the chain you’re connected to in your wallet—so every component needs to be predetermined.
-
-### I’m allowlisting addresses that I got from one chain, but I’m deploying my contest to a different chain. Will these addresses work across different chains?
-
-Yes—with the exception of multisigs. Individual users with hard or soft wallets can use the same accounts on all EVM chains, so if you allowlist one address that you got on one chain, that person will be able to enter or vote on whatever chain you use for your contest. This means you could effectively allowlist token holders on Ethereum Mainnet but have them perform governance entirely on Berachain, for example.
-
-The one exception is multisigs, aka multisignature wallets that are controlled by multiple addresses. These address are not transferable across chains. So if you allowlist a multisig from Ethereum Mainnet for a contest on Berachain, they *won’t* be able to use this address to enter or vote.
-
-Multisigs are, however, the exception, not the rule.
-
-### When I use a preset to allowlist token holders, is there a way to pull a list of everyone who holds that token on all chains?
-
-Unfortunately, there’s no way to query multiple chains at once, so you can only allowlist holders of a token on a given chain. Remember that you can always create a csv of all addresses you’ve personally gathered, however, if you’d like to combine addresses from a number of chains.
-
-### I’m trying to use the presets and want to allowlist tokens on another chain that isn’t listed here—is that possible?
-
-Due to API limitations, the presets only support the chains that you see listed when you select a token.
-
-However, the presets just help you save time, and you can always manually allowlist whoever you want. If you’re looking to allowlist tokens on another chain, we recommend going to that chain’s block explorer, looking up the contract for the token, tapping the “holders” tab (or equivalent), and downloading a spreadsheet of the holders. You can then put this into a new spreadsheet with voters in column A and voting power in column B (or in the case of entries, just entrants in column A). Just export this spreadsheet as a csv and upload it when you create a contest under the appropriate allowlist page.
-
 ## Monetization
 
 ### How can I monetize from creating contests?
@@ -210,9 +166,9 @@ Potential future extensions could include:
 
 ## Troubleshooting
 
-### I can’t enter or vote even though I should be allowlisted—what’s happening?
+### I can’t enter or vote—what’s happening?
 
-Go to “Parameters” on the contest page, download the allowlist, and make sure your address was on it. If not, please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
+Please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
 
 ## Rewards
 
@@ -222,10 +178,7 @@ You can fund the rewards pool on the “rewards” page or sending ERC20s direct
 
 ### Can I withdraw funds from a rewards pool I created?
 
-Yes, the contest creator can always withdraw rewards from the rewards pool, but keep in mind legal liability if you’ve promised rewards to winners. You will also have to cancel the rewards pool before you can withdraw from it.
-
-### What happens when I withdraw funds from the rewards pool?
-People who have already entered will no longer get rewards for their entries, people who played in contests with self-funded rewards pools will lose access to those funds. Therefore, to maintain goodwill and reputation onchain we strongly recommend not withdrawing funds unless you need to cancel the whole contest.
+The contest creator can withdraw rewards from the rewards pool until the first vote is cast on the underlying contest, after that point the creator cannot withdraw. You will also have to cancel the rewards pool before you can withdraw from it.
 
 ### Can I withdraw funds from a rewards pool I funded?
 
@@ -238,12 +191,11 @@ Vote-and-earn means that voters can earn from voting on winning entries when you
 Price curves steadily increase vote prices throughout the contest, incentivizing early, high-conviction votes. Early voters benefit from significantly lower prices, higher potential returns, and rewards from all subsequent voters. This approach aligns incentives, maximizes potential returns, and enhances contest engagement.
 
 ### Who pays for the rewards?
-Rewards come from the contest’s reward pool, just like for entrants. That pool can be funded by the creator, by entry and voting charges, or both. You can also configure a **self-funding** contest, where 90% of every voting fee goes directly into the pool.
+Rewards come from the contest’s reward pool. That pool is funded by voting charges and the creator can also add to it directly as well.
 
 ### How do voter rewards work?
-In contests with voter rewards enabled:
 - Voters pay to cast votes, like usual
-- **If self-funding is turned on**, 90% of each voting charge also goes into the rewards pool
+- 90% of each voting charge also goes into the rewards pool
 - That pool is split by placement (e.g. 80% to 1st place, 20% to 2nd)
 - With price curves, costs per vote increase continuously (e.g., 7.5% per minute), incentivizing early votes at lower prices. Early voters thus stand to earn more as subsequent voters contribute increasingly larger amounts into the pool.
 - After the contest ends, rewards are distributed to voters on the winning entry. Each voter on those winning entries earns a share **proportional to the number of votes they cast**
@@ -254,13 +206,9 @@ In contests with voter rewards enabled:
   - 80% of the pool goes to the 1st place entry = $720
   - 20% goes to the 2nd place entry = $180
   - If you cast 5 of 50 votes on the 1st place entry (10%), you earn $72
-  - *Not all contests use self-funding. Always check the contest description to confirm whether your votes contribute to the rewards pool.
 
 ### Do all voters get rewarded?
-No. Only voters on the **winning entry (or entries**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more you contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
-
-### Can I still run a contest without voter rewards?
-Yes—voter rewards are optional. Contest creators can also reward contestants with winning entries, or keep the 90% of charges for themselves.  
+No. Only voters on the **winning entry (or entries)**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more you contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
 
 ### Why does jk labs take a 10% cut of charges?
 A 10% cut helps ensure contests  are more fair and engaging. Here’s why:
@@ -298,10 +246,6 @@ It depends on how many entries a contestant is allowed to enter in a contest. Fo
 ### What happens if the total number of entries in my contest changes?
 
 If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be enterted.
-
-### If an entry is deleted can it receive rewards?
-
-No, deleted entries cannot earn rewards—they will be disqualified and other entries will take their place in the ranking in the contest. Please note that entries can only be deleted while the contest is running (not after).
 
 ### Do rewards in the rewards pool need to be ERC20s on the same chain as the contest?
 
