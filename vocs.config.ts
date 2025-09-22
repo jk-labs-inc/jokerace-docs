@@ -18,16 +18,6 @@ export default defineConfig({
       link: '/faq',
     },
     {
-      text: 'User How-Tos',
-      collapsed: false,
-      items: [
-        {
-          text: 'Bridging',
-          link: '/user-how-tos/bridging',
-        },
-      ]
-    },
-    {
       text: 'Technical How-Tos',
       collapsed: false,
       items: [
