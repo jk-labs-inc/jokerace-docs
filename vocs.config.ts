@@ -18,6 +18,10 @@ export default defineConfig({
       link: '/faq',
     },
     {
+      text: 'Calculating ROI',
+      link: '/calculating-roi',
+    },
+    {
       text: 'Technical How-Tos',
       collapsed: false,
       items: [
