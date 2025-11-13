@@ -4,11 +4,10 @@
 
 ### What is a contest?
 
-A contest is just a way for people to submit entries and people to vote on their favorites. Every contest includes two periods: an entry period and a voting period. The participants in each might be totally different, exactly the same, or subsets of each other—you have complete control to decide who can enter and who can vote. You can define the addresses that can enter or vote—or let anyone enter or vote (in the latter case, they'll just need to pay per vote to avoid botting).
+A contest is just a way for people to vote on their favorite entries. During the voting period, anyone can buy up votes on a price curve, with 90% of their funds going into a rewards pool; if they vote on the winners, they can claim their share of the rewards.
 
-After you create a contest, you can add and fund an optional rewards pool too. The rewards pool is set up proportionately—for example, you might offer 60% of rewards to voters on 1st place, 30% to voters on 2nd, 10% to voters on 3rd—and anyone can execute the transaction to send any rewards in the pool to the rewarded voters after the contest is over.
-
-Popular contest use cases include grants, hackathons, governance, bounties, ideathons, giveaways, awards ceremonies, best meme/tweet/essay competitions, feature requests, polls, game shows, etc. etc. Any kind of community decision is, effectively, a contest.
+Before the voting period opens, contestants can submit their entries—or the contest creator may only allowlist themselves to submit these entries. a rewards pool; if they vote on the winners, they can claim their share of the rewards.
+Popular contest use cases include demo days, integration decisions, Product-Hunt style leaderboards, community awards,  best meme/tweet/essay competitions, feature requests, polls, and even reality TV show-style votes.etc. Any kind of community decision is, effectively, a contest.
 
 ### Do I need a crypto experience to play in a contest on JokeRace?
 No, Para allows anyone to join JokeRace contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
@@ -23,26 +22,28 @@ There’s no need to rely on external apps to manage your funds. There’s no ne
 ### Which chains can I add cash to?
 See the full list of supported chains [here](https://help.coinbase.com/en/wallet/getting-started/what-types-of-crypto-does-wallet-support)
 
-### How do I claim my funds when I win?
-Just go to "my rewards" tab and you'll see a button to claim rewards for each entry you voted on that won. Unless there's a tie, in which case these go to the contest creator to distribute, and you should reach out to them.
+### How do I claim my funds when I vote on winning entries?
+Just go to "my rewards" tab and you'll see a button to claim rewards for each entry that won. Note that in the case of a tie, these go to the contest creator to distribute, and you should reach out to them.
 
 ### Why is JokeRace onchain?
 
 Onchain contests give you five benefits you couldn’t get offchain.
 
-1. Monetization. Monetizable contests are only possible by building onchain. There is no way to programatically offer rewards to voters offchain. And just as importantly, there is no way to monetize contests directly offchain either—whereas onchain, we can split all commissions with you 90/10 so that everyone can earn. And that’s with 0 credit card or appstore fees that you’d incur offchain. All of this means we are the only way for projects to build a viable business through contests.
+1. Monetization. Voters can earn by voting on winners, creating fun stakes, disincentivizing botting, and, well, enabling them to make real money. In a traditional auction process, for example, the winning bidder would lose money; in a contest, they gain money, incentivizing them to participate.
 
-2. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. If Vitalik votes for you in an onchain hackathon, you have a permanent portable attestation that can get you access to communities, airdrops, and job opportunities... even if you lose the hackathon. This is why reputation is crucial as a user incentive: by participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
+2. Attention. The financial incentives drive attention: for example, voters will want to learn about competing projects and teams in order to determine which they want to win, and they’ll be incentivized to get others to vote for these entries as well. Likewise, they will give their attention to the community throwing the contest.
 
-3. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
+3. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. By participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
 
-4. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+4. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
 
-5. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home. Or maybe most significantly, let entrants know they can (and often do) create their own incentives for voters by leveraging onchain data.
+5. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+
+6. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home.
 
 ### Can you delete entries?
 
-Contest creators can delete or batch delete entries during the entry and voting periods. Nobody can delete entries after the contest closes (after the voting period). To preserve trust, we highly recommend only removing entries that clearly violate your contest instructions.
+Contest creators can delete or batch delete entries during the entry and voting periods. Nobody can delete entries after the first vote is cast. To preserve trust, we highly recommend only removing entries that clearly violate your contest instructions.
 
 ### I created a contest and want to edit it. Can I update any part of it?
 
@@ -56,31 +57,13 @@ Copy the url of the contest. The last string of letters and numbers is the contr
 
 Yes! See [Verifying Contracts](/technical-how-tos/verifying-contracts).
 
-### If I delete an entry, how does that affect who can enter?
-
-If you delete an entry, it will open up one more slot for total entries. So let’s say your contest accepts 100 entries, and all 100 have been entered. If you delete 1, there will now be room for one more entry (assuming the entry period is still open).
-
-However, the person whose entry you deleted does not get a bonus entry as a result. So if you only let each wallet enter one entry, the player whose entry was deleted cannot enter another entry from that wallet.
-
-### I want to input the entries myself for everyone to vote on—what’s the best way to do this?
-
-First, when you create the contest, just allowlist yourself to enter. You can do this by selecting “manual entry” for the entry allowlist, and just copy-pasting your address in the top row.
-
-Second, when you’re creating the contest, just make sure that entrants (ie you) can enter enough entries. On the “customizations” page, tap the “max” button under “how many entries can each player enter?” This will let you enter as many entries as you like.
-
 ### Can voters vote once or multiple times?
 
-Voters can vote as many times as they like—as long as they have enough votes. Decimal voting is not allowed, so a voter with 1 vote could only vote once. A voter with 100 votes, however, could deploy all 100 votes to one entry, or 50 to one entry and 50 to another, or spread 100 votes across 100 entries. They can always return to give more votes to entries as well.
+Voters can buy as many votes as they can afford, and they can vote as many times as they like on as many entries as they like. Decimal voting is not allowed.
 
 ### Which chains is JokeRace live on?
 
 You can see the comprehensive list of chains we're live on [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains).
-
-### How can I tell which contests are legitimate?
-
-We feature top legitimate ones on our front page. But if you’re concerned, you can check any user’s profile to see the previous contests they deployed to see the traction they’ve gotten and onchain rewards they offered (and by extension, whether they were legitimate). Projects themselves will typically feature links to contests as well, so you can verify here too.
-
-If for any reason you are concerned about the legitimacy of a contest, please feel free to reach out, and remember that the risk you face is simply in lost fees for enterting or voting in the contest. For that reason, however, we encourage you *never* to send funds to a rewards pool that isn’t your own.
 
 ### What are fields?
 
@@ -94,78 +77,21 @@ When a contest creator adds fields to entries, they effectively require that ent
 2. a number (integer)
 3. a contract or token address
 
-Here’s a few examples of how you could build new use cases on top of fields:
-
-- **Nominating someone to win a prize**: You could hold a contest for anyone to nominate a winner who would earn a prize. Just add a field for players to give the nominee's address, and then easily send rewards to the nominee directly, rather than to the entrant who nominated them.
-
-
-- **Raising funds for a cause**: Let's say you want to raise funds for a nonprofit—but have no money. You could throw a contest for people to nominate a nonprofit by giving its address. And you could then collect entry and voting fees from the contest itself and send these to the winner. The contest itself would fund the donation.
-
-
-- **Making money from publicly-chosen awards**: Now let's say you want to make money while letting the public pick who earns an award, gets to speak at a conference, gets to appear on your podcast, etc. You can let anyone nominate a speaker, and add a field to collect their address. You could then keep the funds from the contest but give credentials to all the nominated winners.
-
-
-- **Managing a treasury**: Contest entrants could describe their proposed treasury management system and enter a field with an associated contract address. The contract for the winner could be executed, fully onchain.
-
 Basically, you can build smart contracts on top of contests to execute *any* kind of logic involving strings, numbers, and addresses, in order to determine allocations, funding, reputation, etc.
 
 All of this can be done programmatically on [top of our contest smart contracts](https://docs.jokerace.io/technical-how-tos/jokerace-onchain-data).
 
-## Allowlists
+### What file types can I upload as part of a contest entry?
 
-### What kind of allowlists are possible?
+You can currently upload links, text and images to any type of contest. 
 
-You can allowlist any onchain addresses you want, so you can get creative. Ultimately you can just place the addresses in column A of a CSV, the voting power in column B, and upload to our site when you create a contest. So you have full freedom to determine criteria however you want.
+Please note that for title format contests only the title will be displayed on the contest page and users will need to click the entry itself to view any attached images.
 
-Want to save time? We’ve built some presets so that you can just drop the address of an NFT or token, and we’ll allowlist all the voters—no CSV required.
+If you’re hoping to run a multimedia contest with video or audio we suggest selecting the “tweet” format for your contest–users can upload the media to their tweet and enter the tweet to the contest.
 
-### So token-voting is possible?
+### What does it mean if a tweet entry isn’t visible?
 
-Absolutely! Token-voting is the easiest option: just drop the token address, and the holders will be allowlisted.
-
-But it’s not the only option. If you want to allowlist based on other criteria, you can handle however you like—as long as you have a list of addresses to share.
-
-### How many addresses can I allowlist?
-
-Up to 100,000 addresses can be allowlisted for both entry and voting. You can also let anyone enter to your contest or vote on entries in your contest if you like.
-
-### Can you allowlist with ENS?
-
-ENS is not currently compatible with allowlists. If you’re manually uploading an allowlist, make sure that all addresses are written out alphanumerically, beginning with “0x”.
-
-### Is there a way to capture the allowlist at a later point after the contest is launched?
-
-No, all components of the contest, including the allowlist, must be decided when the contest is created. This is because each contest is a smart contract that you’re deploying to the chain you’re connected to in your wallet—so every component needs to be predetermined.
-
-### I’m allowlisting addresses that I got from one chain, but I’m deploying my contest to a different chain. Will these addresses work across different chains?
-
-Yes—with the exception of multisigs. Individual users with hard or soft wallets can use the same accounts on all EVM chains, so if you allowlist one address that you got on one chain, that person will be able to enter or vote on whatever chain you use for your contest. This means you could effectively allowlist token holders on Ethereum Mainnet but have them perform governance entirely on Berachain, for example.
-
-The one exception is multisigs, aka multisignature wallets that are controlled by multiple addresses. These address are not transferable across chains. So if you allowlist a multisig from Ethereum Mainnet for a contest on Berachain, they *won’t* be able to use this address to enter or vote.
-
-Multisigs are, however, the exception, not the rule.
-
-### When I use a preset to allowlist token holders, is there a way to pull a list of everyone who holds that token on all chains?
-
-Unfortunately, there’s no way to query multiple chains at once, so you can only allowlist holders of a token on a given chain. Remember that you can always create a csv of all addresses you’ve personally gathered, however, if you’d like to combine addresses from a number of chains.
-
-### I’m trying to use the presets and want to allowlist tokens on another chain that isn’t listed here—is that possible?
-
-Due to API limitations, the presets only support the chains that you see listed when you select a token.
-
-However, the presets just help you save time, and you can always manually allowlist whoever you want. If you’re looking to allowlist tokens on another chain, we recommend going to that chain’s block explorer, looking up the contract for the token, tapping the “holders” tab (or equivalent), and downloading a spreadsheet of the holders. You can then put this into a new spreadsheet with voters in column A and voting power in column B (or in the case of entries, just entrants in column A). Just export this spreadsheet as a csv and upload it when you create a contest under the appropriate allowlist page.
-
-## Monetization
-
-### How can I monetize from creating contests?
-
-On the final page of creating a contest, you can set monetization options to charge players for enterting and voting. JokeRace splits these fees with you 90/10, and you can set these as high as you like. (Please note this is only available on major chains and includes a minimum price to set). At the lowest end, a charge helps maintain high-quality entries and deters bots; it’s comparable to standard fees in many grant processes or festivals. At the higher end, you can charge users higher amounts if the incentives are great enough (see below).
-
-So for example, let’s say you want to create a game show that runs each week. You might start by having relatively low entry fees with low rewards. The next week, you might take your earnings from entries and put them into a slightly higher rewards pool—justifying a slightly higher entry fee. Rinse, repeat, and over time you can raise rates sustainably.
-
-This is only one option for monetizing. Other communities may want to use contests to give utility to their token or to leverage the data from the contests to get sponsors attuned with their users. Still others might want to get sponsors for the rewards and take a cut.
-
-There are endless ways to monetize contests, some natively on JokeRace’s site, and some off-site as well.
+It means that twitter (x.com) itself is blocking the post from being seen publicly. The post may have been deleted, may be from a private or deactivated account, or may be marked as sensitive content on Twitter’s end.
 
 ## Extensions
 
@@ -210,74 +136,80 @@ Potential future extensions could include:
 
 ## Troubleshooting
 
-### I can’t enter or vote even though I should be allowlisted—what’s happening?
+### I can’t enter the contest — what’s happening?
 
-Go to “Parameters” on the contest page, download the allowlist, and make sure your address was on it. If not, please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
+It is likely that the contest creator only allowlisted themselves to submit entries for this contest; it is also possible that voting has opened or the contest has closed, so it’s no longer possible to submit entries. Entries must be submitted before voting starts. If not, please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
 
-## Rewards
-
-### How does funding the rewards pool work?
-
-You can fund the rewards pool on the “rewards” page or sending ERC20s directly to the contract address on the rewards page.
+## Vote-And-Earn
 
 ### Can I withdraw funds from a rewards pool I created?
 
-Yes, the contest creator can always withdraw rewards from the rewards pool, but keep in mind legal liability if you’ve promised rewards to winners. You will also have to cancel the rewards pool before you can withdraw from it.
-
-### What happens when I withdraw funds from the rewards pool?
-People who have already entered will no longer get rewards for their entries, people who played in contests with self-funded rewards pools will lose access to those funds. Therefore, to maintain goodwill and reputation onchain we strongly recommend not withdrawing funds unless you need to cancel the whole contest.
+The contest creator can withdraw rewards from the rewards pool at any time until the first vote is cast. Once the first vote is cast, it is no longer possible to withdraw funds.
 
 ### Can I withdraw funds from a rewards pool I funded?
 
 Only contest creators can withdraw funds of the associated rewards pool. If you are not the contest creator, we highly recommend that you do not fund a rewards pool, as there is no way for you to withdraw funds.
 
 ### What is vote-and-earn?
-Vote-and-earn means that voters can earn from voting on winning entries when you add a rewards pool for voters to a contest (contest creators can find this on the “my rewards” tab of the contest). And with price curves, voting costs rise steadily, rewarding early voters who can earn significantly higher returns as later voters drive up the pool.
+
+Vote-and-earn means that voters can earn from voting on winning entries. With price curves, the price per vote rises steadily every minute, incentivizing early voters to vote with conviction in order to claim a greater share of the rewards and earn much more.
 
 ### What are Price curves?
-Price curves steadily increase vote prices throughout the contest, incentivizing early, high-conviction votes. Early voters benefit from significantly lower prices, higher potential returns, and rewards from all subsequent voters. This approach aligns incentives, maximizes potential returns, and enhances contest engagement.
+
+Price curves increase the price per vote at every minute throughout the contest, incentivizing early, high-conviction votes. Early voters can claim a greater share of the votes for much cheaper, enabling them to benefit from significantly lower prices, higher potential returns, and rewards from all subsequent voters who help subsidize their earnings. This approach aligns incentives, maximizes potential returns, and enhances contest engagement.
 
 ### Who pays for the rewards?
-Rewards come from the contest’s reward pool, just like for entrants. That pool can be funded by the creator, by entry and voting charges, or both. You can also configure a **self-funding** contest, where 90% of every voting fee goes directly into the pool.
+
+90% of all voting fees go into the rewards pool, creating a liquidity flywheel: as voters vote, rewards go up, incentivizing more voters to vote in turn. In addition, you can seed the rewards pool to help kickstart the contest (we generally recommend seeding with $100-200 that helps incentivize initial voters to play).
 
 ### How do voter rewards work?
-In contests with voter rewards enabled:
-- Voters pay to cast votes, like usual
-- **If self-funding is turned on**, 90% of each voting charge also goes into the rewards pool
-- That pool is split by placement (e.g. 80% to 1st place, 20% to 2nd)
+- Voters buy as many votes as they like on an entry or entries 90% of their funds go  into the rewards pool
+- Voters on winning entries can claim their share of the rewards at the end of the contest on the “My Rewards” tab.
+
+Additional considerations:
+- The rewards pool is split by placement (e.g. 80% to 1st place voters, 20% to 2nd voters)
 - With price curves, costs per vote increase continuously (e.g., 7.5% per minute), incentivizing early votes at lower prices. Early voters thus stand to earn more as subsequent voters contribute increasingly larger amounts into the pool.
-- After the contest ends, rewards are distributed to voters on the winning entry. Each voter on those winning entries earns a share **proportional to the number of votes they cast**
+- Each voter on those winning entries earns a share **proportional to the number of votes they cast**.
+
 - For example:
-  - Let’s assume there’s a contest where the creator sets 80% of the rewards pool to go to 1st place voters and 20% to 2nd place voters. The creator **does not** fund this pool independently but lets it self-fund.
-  - $1000 is spent on votes across the entire contest
+  - Let’s assume there’s a contest where the creator sets 80% of the rewards pool to go to 1st place voters and 20% to 2nd place voters. The creator **does not** fund this pool independently but lets it self-fund. $1000 is spent on votes across the entire contest.
   - 90% ($900) goes to the rewards pool
   - 80% of the pool goes to the 1st place entry = $720
   - 20% goes to the 2nd place entry = $180
   - If you cast 5 of 50 votes on the 1st place entry (10%), you earn $72
-  - *Not all contests use self-funding. Always check the contest description to confirm whether your votes contribute to the rewards pool.
 
 ### Do all voters get rewarded?
 No. Only voters on the **winning entry (or entries**, if the contest rewards multiple placements) receive a portion of the rewards pool. The more you contribute to that entry’s total votes, the more you’ll earn. And with price curves, earlier votes may yield dramatically higher returns.
 
-### Can I still run a contest without voter rewards?
-Yes—voter rewards are optional. Contest creators can also reward contestants with winning entries, or keep the 90% of charges for themselves.  
+### Why do you recommend a two-hour voting period?
+
+First, two hour contests play out like a traditional sports game, creating a much more fun experience where people can play along throughout the contest. Past two or three hours, it's hard for people to play in the contest live, defend their vote, and have fun strategizing about how to win.
+
+Second, price curves usually make it prohibitive to enter a contest after the first half or so, which is the point: people should buy votes early with conviction, not just wait to buy votes on the clear winner. So extending contests doesn’t actually give more opportunities to players, since players will generally want to play from the start and continue playing throughout.
+
+If you’re concerned that two hours isn’t enough time for people to discover the contest, we *highly* encourage creating the contest a week in advance and dropping the link so that people can plan to play in it—as in a sports game. Likewise, you can run bracket tournaments with a series of one-on-one contests every day that help build momentum and give more opportunities for players to participate.
+
+With that said, you can set the voting period to last up to 24 hours.
 
 ### Why does jk labs take a 10% cut of charges?
-A 10% cut helps ensure contests  are more fair and engaging. Here’s why:
-- Prevents whales from farming rewards: The 10% cut helps ensure  brute-force winning is unprofitable. It disincentivizes whales from swooping in with a large pot of money to claim 1st place and earn from everyone else’s vote, since they effectively need to pay a 10% charge on their own votes. 
-- Encourages diverse voting: Once an entry has 90% of votes (assuming only 1st place voters earn), it’s no longer profitable to continue voting on that entry, so contestantsparticipants should consider all viable options to vote on. Likewise, voters can only earn if players vote on *other* entries in order to increase the rewards pool that lets them earn more than the 10% they pay. This helps encourage everyone to help share the contest with the most diverse contestantsparticipants possible in order to maximize their own rewards. 
+
+A 10% cut is what funds the protocol and helps ensure contests are more fair and engaging. Here’s why:
+
+- Prevents whales from farming rewards: The 10% cut disincentivizes whales from swooping in with a large pot of money to claim 1st place and earn from everyone else’s vote, since they effectively need to pay a 10% charge on their own votes. For example, it is extremely risky for a whale to drop $1,000,000 on an entry at the start: either they discourage other voters from participating, thus incurring a $100,000 fee, or they create a honey pot for other voters to band together and try to claim the $1,000,000 in the rewards pool.
 
 ### How does this change voter strategy?
+
 Voter rewards introduce real decision-making into contests. For example:
 - You want to vote on entries that can win—since only winning voters earn
-- Once an entry in a fully self-funded contest has a certain percentage of votes [90%*(percent that their rank earns)], then voters can no longer earn from it. For example, let’s say 1st place voters get 100% of the rewards pool, and the rewards pool is funded by 90% of charges. If voters pay for 1000% of votes, and only get 90% of the funds from voting, then they effectively lose. 
+- Voters should always question whether it’s actually worth it to vote for a consensus option that’s likely to win: even if they vote for a winner, they could still lose money if they vote late in the game when the price curve has driven up the cost per vote… meaning that they’ve had to pay much more than earlier voters for a smaller share of the rewards. Voters can always check the [calculations for ROI](https://docs.jokerace.io/calculating-roi) and can always earn the most by voting with conviction early.
+- With that said, there may still be reasons to vote later. Voters might still be able to make money up to a certain point on entries. Voters might want to defend an entry they voted for earlier. Or voters could still make money if other voters vote after them, helping subsidize their win.
 - The more entries in a contest, the greater the risk and reward for players. For example, if there are two entries, then one needs 51% to win. if there are 10, then one might only need 11%. This means that the risk and reward are both much greater since you can win 90% of rewards for 11% of the vote, but of course it's less likely you will.
 
 Price Curves create significantly deeper strategy:
-- Reward Conviction: Early votes are cheaper, offering much higher risk and return, with greater rewards for voting with conviction.
-- Liquidity Flywheel: Because voters earn more from voting early, they can provide liquidity into the rewards pool that then draws more people to play, setting off a liquidity flywheel that brings in more and more players as the contest continues.
-- Virality Incentives: Earnings come from everyone voting after you, encouraging voters to persuade others to follow their choices.
-- Drama: By creating FOMO and escalating rewards, contests become much more fun as the stakes rise continuously.
+- **Reward Conviction**: Early votes are cheaper, offering much higher risk and return, with greater rewards for voting with conviction.
+- **Liquidity Flywheel**: Because voters earn more from voting early, they can provide liquidity into the rewards pool that then draws more people to play, setting off a liquidity flywheel that brings in more and more players as the contest continues.
+- **Virality Incentives**: Earnings come from everyone voting after you, encouraging voters to persuade others to follow their choices.
+- **Drama**: By creating FOMO and escalating rewards, contests become much more fun as the stakes rise continuously.
 
 ### Who is responsible for KYC verification in contests?
 
@@ -285,23 +217,15 @@ Contest creators are fully responsible for the deployment and ownership of smart
 
 ### How high do rewards do need to be for me to KYC?
 
-Generally, KYC requirements vary by jurisdiction. Because they’re not universal, we recommend that contest creators do your own diligence to confirm compliance with local regulations. JokeRace does not enforce KYC limits directly.
-
-### Can I KYC users within the contest?
-
-If you want to KYC players, we recommend adding a field for contestants to respond to where they can link any KYC verification. 
+Generally, KYC requirements vary by jurisdiction. Because they’re not universal, we recommend that contest creators do your own diligence to confirm compliance with local regulations.
 
 ### If a contestant’s entry is deleted, can they re-enter the contest?
 
-It depends on how many entries a contestant is allowed to enter in a contest. For example, if a contestant is allowed to enter two entries, then they can delete their first and still enter a second. However, if they were only allowed to enter one entry, then they will not be allowed to re-enter after deleting their entry. For this reason, we recommend letting contestants enter twice, just in case they need to delete and re-enter.
+Yes: by default, contestants can enter up to 1000 times, so even if they delete a number of entries, they should still have plenty of slots to reenter.
 
-### What happens if the total number of entries in my contest changes?
+### What happens if I delete entries? 
 
-If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be enterted.
-
-### If an entry is deleted can it receive rewards?
-
-No, deleted entries cannot earn rewards—they will be disqualified and other entries will take their place in the ranking in the contest. Please note that entries can only be deleted while the contest is running (not after).
+If you delete entries from your contest, it opens up additional slots for new entries. For example, if your contest allows 1,000 entries and is completely full, you can still delete 100, and 100 additional entries can be entered.
 
 ### Do rewards in the rewards pool need to be ERC20s on the same chain as the contest?
 
@@ -314,27 +238,19 @@ Ties are complicated!
 That's why in the case of ties, the funds for the potential winners get disbursed back to the creator to make a call and handle manually.
 
 **How and when rewards return to contest creator:**
-All affected ranks will have their rewards returned to the contest creator. that includes any ranks that incurred a tie, as well as any ranks below. For example, if the contest has rewards set for 1st, 2nd and 3rd place, but multiple contestants tied for 2nd, then only the reward funds that were on hold for 2nd and 3rd will be returned to the contest creator.
+All affected ranks will have their rewards returned to the contest creator. That includes any ranks that incurred a tie, as well as any ranks below. For example, if the contest has rewards set for 1st, 2nd and 3rd place, but multiple contestants tied for 2nd, then only the reward funds that were on hold for 2nd and 3rd will be returned to the contest creator.
 
-We recommend including your own policy for ties in your contest description to share with players. If you're looking for a specific policy, you’re welcome to copy-paste our own policy we use when we run contests.
+We recommend including your own policy for ties in your contest description to share with players.
 
-“In the case that x players are tied for a given rank, they will get an equal share of the sum of rewards for that rank and the (x-1) ranks that follow it distributed among them. for example, if 3 players tie for 2nd place, they will get the shares of 2nd-4th place distributed among all three equally, and the 3rd place winner would now get 5th place.
-
-In the case where there are more tied players than remaining ranks, they will get the remainder of rewards distributed to them. for example, if 3 players tie for 2nd place, but only the top 3 ranks get rewards, then these 3 players will split the sum of rewards from 2nd and 3rd place equally.”
-
-You're welcome to follow any policy you like, but we use this one because it sticks as closely as possible to the original intention of rewards, in which the ranks should correspond to the total number of players (or be shared evenly at the bottom).
-
-In other words, if we accounted for 5 winners with 5 ranks, then our goal is to try to have those rewards go to the top 5 winners… or to split them if there's a tie at the bottom.
-
-You can see what that looks like in a case where two players tie for 3rd, and two tie for 4th:
-![Tie Explainer](/tie-explainer.png)
+**What happens if I need to distribute rewards to multiple people?**
+If you need to distribute rewards to multiple people, go to the extensions tab of your contest and tap the “see analytics” button to access a dashboard of everyone who entered or voted. (Please note dashboards are only supported on major chains, so if you don’t see the link, you’ll need to pull these addresses manually.) You can then use a tool like disperse.app to distribute the rewards to multiple addresses. We do not own and are not liable for any dispersal apps.
 
 ## Circuits
 Circuits are a mechanism for contest creators to direct earnings to independent smart contracts that perform onchain transactions. That means that whenever a player in a contest enters, votes, or performs any kind of action generating earnings, they can simultaneously perform any onchain action, such as buying tokens, minting collectibles, providing liquidity, or earning credentials—all as part of playing in a contest.
 
 Check out the [technical documentation page](/technical-how-tos/circuits) for more in-depth information.
 
-## Use Cases
+## Reputation 
 
 ### How can I use JokeRace for points and reputation?
 
@@ -349,52 +265,6 @@ To get analytics on your contest, tap the “extensions” tab and “see analyt
 - community access
 - credentials
 - reimbursements
-
-### Is JokeRace a quests platform?
-
-JokeRace is a contests platform, not a quests platform—though it is actually quite complementary with most quests platforms.
-
-Quests platforms offer incentives for anyone who performs a series of tasks with a service. 
-
-Contests only offer rewards to winners, who are selected by voters.
-
-Even then, contest creators have the option whether or not to add a rewards pool to their contest and may elect to run a contest without one (if, for example, they are using a contest to make a decision, or if they want to offer other kinds of rewards besides tokens).
-
-While quests platforms are quite good at getting a large quantity of users and bots to perform the same action, contests are good for getting quality users to compete with original entries.
-
-And this is why quests and contests can be complementary. For example, you might just allowlist anyone to enter or vote who’s performed a quest—incentivizing them to perform the quest in order to participate in the contest for greater rewards. Or you might create a quest to incentivize people to enter or vote in a contest to increase engagement. Finally, you might use the metrics from a contest to determine who your quality users are—for example, giving one “point” for each vote that entrants have gotten across your contests. You could then use these metrics to allowlist future quests to prevent bots from participating.
-
-### I’ve already collected applications, nominations, or entries from another site. Is there a way to import them into a contest for others to vote on?
-
-You can always set up a contest that only you enter into—if you like, you can even allowlist the entries so that only you can enter.
-
-However, we strongly recommend letter users enter directly to get the full benefits of onchain contests, including:
-
-- Onchain reputation (ie every vote they get could be a point attesting to value of their project)
-- Rewards for winners onchain
-- Monetization (you can set entry fees that we split with you 90/10)
-
-If you do choose to enter directly, you’ll need to cover the entry fees for the contest yourself and will lose the advantages above.
-
-### How can a contest fund itself?
-
-After you create a contest, you can create a rewards pool as well on the contest’s rewards page. When you create the rewards pool, just turn on the toggle on the final screen to send all earnings to the rewards pool.
-
-How does this work? Well, JokeRace split all fees from users with contest creators. So when you turn on self-funding, instead of collecting your fees, you’re choosing for them to go directly into the rewards pool. That means that 90% of all fees go back into rewards.
-
-Price curves further enhance self-funding. By incentivizing early voters to buy votes at lower prices, price curves seed the rewards pool earlier, kickstarting the participation flywheel and boosting engagement—especially useful when contest creators have limited initial funds.
-
-This is the magic of programmable money.
-
-### What are the benefits of self-funding?
-
-First, you can enable financial incentives for contests without putting up any money of your own. This can be a powerful tool to incentivize participation.
-
-But second, this creates a flywheel. The more people that participate, the higher the rewards go. And the higher the rewards go, the more incentive there is to participate.
-
-Third, it adds extra incentives for entrants to get as many votes as possible. The more people that vote for them, the more money they stand to earn—and the more likely they are to win. This can create dynamic competitions with players.
-
-Finally, in anyone-can-vote-contests, it can help prevent arbitrage opportunities that accompany traditional rewards. For example, in an externally funded contest, players may be incentivized to buy up votes in order to get the rewards. If the prize pool is $500, for example, they may want to spend hundreds of dollars to try to win in order to earn. This can be a very fun game of its own, but self-funding helps avoid it. Since users only get back 90% of what they put in, they’re much less incentivized to try to arbitrage a prize pool (since even if it’s quite large, that’s likely due to voting on other entries). 
 
 ## AI Agents
 
