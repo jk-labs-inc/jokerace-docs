@@ -38,10 +38,6 @@ export default defineConfig({
           link: '/technical-how-tos/jokerace-onchain-data',
         },
         {
-          text: 'Circuits',
-          link: '/technical-how-tos/circuits',
-        },
-        {
           text: 'Troubleshooting',
           link: '/technical-how-tos/troubleshooting',
         },
