@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## JokeRace Basics
+## Confetti Basics
 
 ### What is a contest?
 
@@ -9,8 +9,8 @@ A contest is just a way for people to vote on their favorite entries. During the
 Before the voting period opens, contestants can submit their entries—or the contest creator may only allowlist themselves to submit these entries. a rewards pool; if they vote on the winners, they can claim their share of the rewards.
 Popular contest use cases include demo days, integration decisions, Product-Hunt style leaderboards, community awards,  best meme/tweet/essay competitions, feature requests, polls, and even reality TV show-style votes.etc. Any kind of community decision is, effectively, a contest.
 
-### Do I need a crypto experience to play in a contest on JokeRace?
-No, Para allows anyone to join JokeRace contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
+### Do I need a crypto experience to play in a contest on Confetti?
+No, Para allows anyone to join Confetti contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
 
 How do I send funds?
 1. tap user profile (upper right)
@@ -25,7 +25,7 @@ See the full list of supported chains [here](https://help.coinbase.com/en/wallet
 ### How do I claim my funds when I vote on winning entries?
 Just go to "my rewards" tab and you'll see a button to claim rewards for each entry that won. Note that in the case of a tie, these go to the contest creator to distribute, and you should reach out to them.
 
-### Why is JokeRace onchain?
+### Why is Confetti onchain?
 
 Onchain contests give you five benefits you couldn’t get offchain.
 
@@ -37,7 +37,7 @@ Onchain contests give you five benefits you couldn’t get offchain.
 
 4. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
 
-5. Executability. Anyone can build modules on top of JokeRace so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+5. Executability. Anyone can build modules on top of Confetti so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
 
 6. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home.
 
@@ -51,7 +51,7 @@ You can edit the header image, title and description of your contest. If you nee
 
 ### How do I find the contract address for a contest?
 
-Copy the url of the contest. The last string of letters and numbers is the contract address. Every url is formatted as follows: www.jokerace.io/contest/[chain]/[contract-address]
+Copy the url of the contest. The last string of letters and numbers is the contract address. Every url is formatted as follows: confetti.win/contest/[chain]/[contract-address]
 
 ### Can I verify this contract?
 
@@ -61,9 +61,9 @@ Yes! See [Verifying Contracts](/technical-how-tos/verifying-contracts).
 
 Voters can buy as many votes as they can afford, and they can vote as many times as they like on as many entries as they like. Decimal voting is not allowed.
 
-### Which chains is JokeRace live on?
+### Which chains is Confetti live on?
 
-You can see the comprehensive list of chains we're live on [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains).
+You can see the comprehensive list of chains we're live on [here](https://github.com/jk-labs-inc/confetti/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains).
 
 ### What are fields?
 
@@ -79,7 +79,7 @@ When a contest creator adds fields to entries, they effectively require that ent
 
 Basically, you can build smart contracts on top of contests to execute *any* kind of logic involving strings, numbers, and addresses, in order to determine allocations, funding, reputation, etc.
 
-All of this can be done programmatically on [top of our contest smart contracts](https://docs.jokerace.io/technical-how-tos/jokerace-onchain-data).
+All of this can be done programmatically on [top of our contest smart contracts](https://docs.confetti.win/technical-how-tos/confetti-onchain-data).
 
 ### What file types can I upload as part of a contest entry?
 
@@ -138,13 +138,13 @@ No. Only voters on the **winning entry (or entries**, if the contest rewards mul
 
 **Yes**. Though you will still earn money by voting on a winner, you might earn less than what you paid. There are two reasons for this. The first, most important one, is the price curve: late voters pay more per vote, so if an early and later voter each put in the same amount of money, the late voter will get a much smaller share of the rewards. This is deliberate to incentivize early conviction voting. By the time it’s clear or obvious what is going to win, it should be hard or impossible to earn. The second, is because only 90% of funds you pay go into the rewards pool, and only a portion of that might go to 1st place voters. So for example, if 1st place gets 80% of rewards, then for every $100 you put in, only $72 is going into the rewards for 1st place. This is also deliberate to prevent whales from manipulating the rewards by dropping in millions of dollars with an assurance they’ll get their money back.
 
-You can always check the math to calculate your presumed earnings [here](https://docs.jokerace.io/calculating-roi).
+You can always check the math to calculate your presumed earnings [here](https://docs.confetti.win/calculating-roi).
 
 ### If it’s hard to make money at the end of a contest, then why would anyone vote near the end?
 
 There’s a few reasons it can still make sense to vote near the end of the contest when the price curve is quite high. First, if the contest is extremely close, you might still be able to make a gain.  Second, early voters might want to protect their earnings by voting at a slight loss near the end. And finally, even if you're voting in the last 10 minutes at a presumed loss, you could still earn if a lot more people come in and vote after you—since they're helping subsidize your earnings by paying even more than you. In close contests, this is not unlikely.
 
-You can always check the math to calculate your presumed earnings [here](https://docs.jokerace.io/calculating-roi).
+You can always check the math to calculate your presumed earnings [here](https://docs.confetti.win/calculating-roi).
 
 ### Why do you recommend a two-hour voting period?
 
@@ -176,7 +176,7 @@ A 10% cut is what funds the protocol and helps ensure contests are more fair and
 
 Voter rewards introduce real decision-making into contests. For example:
 - You want to vote on entries that can win—since only winning voters earn
-- Voters should always question whether it’s actually worth it to vote for a consensus option that’s likely to win: even if they vote for a winner, they could still lose money if they vote late in the game when the price curve has driven up the cost per vote… meaning that they’ve had to pay much more than earlier voters for a smaller share of the rewards. Voters can always check the [calculations for ROI](https://docs.jokerace.io/calculating-roi) and can always earn the most by voting with conviction early.
+- Voters should always question whether it’s actually worth it to vote for a consensus option that’s likely to win: even if they vote for a winner, they could still lose money if they vote late in the game when the price curve has driven up the cost per vote… meaning that they’ve had to pay much more than earlier voters for a smaller share of the rewards. Voters can always check the [calculations for ROI](https://docs.confetti.win/calculating-roi) and can always earn the most by voting with conviction early.
 - With that said, there may still be reasons to vote later. Voters might still be able to make money up to a certain point on entries. Voters might want to defend an entry they voted for earlier. Or voters could still make money if other voters vote after them, helping subsidize their win.
 - The more entries in a contest, the greater the risk and reward for players. For example, if there are two entries, then one needs 51% to win. if there are 10, then one might only need 11%. This means that the risk and reward are both much greater since you can win 90% of rewards for 11% of the vote, but of course it's less likely you will.
 
@@ -224,22 +224,22 @@ If you need to distribute rewards to multiple people, go to the extensions tab o
 
 ### What are extensions?
 
-Extensions are 3rd party integrations built on top of JokeRace’s protocol that extend the features and functionality of contests.
+Extensions are 3rd party integrations built on top of Confetti’s protocol that extend the features and functionality of contests.
 Anyone can build an extension permissionlessly, and we’ll feature select ones on our site that link to the 3rd party’s integration. We want users to discover the services of anyone who has built on top of us.
 
 ### What should I do if I want to build an extension?
 
-First of all, dm us on [twitter](https://twitter.com/jokerace_io)! We’d love to hear what you’re up to and see if we can support.
+First of all, dm us on [twitter](https://twitter.com/confetti_win)! We’d love to hear what you’re up to and see if we can support.
 
-JokeRace is fully onchain, so we have no API: the blockchain itself is effectively our API. You can query and parse and listen to any data you need directly from the chain, as each contest is its own smart contract.
+Confetti is fully onchain, so we have no API: the blockchain itself is effectively our API. You can query and parse and listen to any data you need directly from the chain, as each contest is its own smart contract.
 
 Generally the strongest extensions will include:
 
-1. A standalone page for a given contest—or for users to input the url to a contest. This lets us link directly to a page that’s specifically relevant to JokeRace.
+1. A standalone page for a given contest—or for users to input the url to a contest. This lets us link directly to a page that’s specifically relevant to Confetti.
 2. Ample context on the page about how the extension works and what each field means (or, alternately, a link to docs explaining these).
 3. Support for as many EVM chains as possible.
 
-Not all extensions should look the same, however. We want JokeRace to be able to feed data and metadata into everything from analytics and points platforms to onchain execution services, so our top goal is expanding use cases for partners.
+Not all extensions should look the same, however. We want Confetti to be able to feed data and metadata into everything from analytics and points platforms to onchain execution services, so our top goal is expanding use cases for partners.
 
 ### What are examples of extensions?
 
@@ -265,17 +265,17 @@ Potential future extensions could include:
 
 ### I can’t enter the contest — what’s happening?
 
-It is likely that the contest creator only allowlisted themselves to submit entries for this contest; it is also possible that voting has opened or the contest has closed, so it’s no longer possible to submit entries. Entries must be submitted before voting starts. If not, please [file a bug report](https://github.com/jk-labs-inc/jokerace/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
+It is likely that the contest creator only allowlisted themselves to submit entries for this contest; it is also possible that voting has opened or the contest has closed, so it’s no longer possible to submit entries. Entries must be submitted before voting starts. If not, please [file a bug report](https://github.com/jk-labs-inc/confetti/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=bug%3A+).
 
 ## Reputation 
 
-### How can I use JokeRace for points and reputation?
+### How can I use Confetti for points and reputation?
 
-One easy way to imagine JokeRace is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has entered an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
+One easy way to imagine Confetti is as a ledger of user preferences and attestations. Whenever one person votes for an entry, they’re expressing a preference for it—and attesting to its value. Likewise whenever a person who has entered an entry earns a vote, they’re earning an attestation that their entry was valuable to the community that voted.
 
 What this means is that even if you lose a contest, you still win—because you’re earning reputation. For example, if a community designed a simple point system that offered one “point” for every vote a person received, they would be able to gauge the value that this person had contributed to the community—by merely adding up the onchain votes over time. With a legitimate voterpool, this system couldn’t be botted or overrun by airdrop farmers. Submitters would actually have to create value for the community to earn value in return.
 
-But this is just one example. In fact, because JokeRace is fully onchain, you can use any data point from contests to determine your own system of rewarding reputation.
+But this is just one example. In fact, because Confetti is fully onchain, you can use any data point from contests to determine your own system of rewarding reputation.
 
 To get analytics on your contest, tap the “extensions” tab and “see analytics” button. your contest dashboard shows you everyone who entered and voted. just pull their addresses and you can give them
 - airdrops

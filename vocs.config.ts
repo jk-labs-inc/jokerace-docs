@@ -1,8 +1,8 @@
 import { defineConfig } from 'vocs'
 
 export default defineConfig({
-  title: 'JokeRace Docs',
-  description: 'The What, Where, How, and Why of everything JokeRace',
+  title: 'Confetti Docs',
+  description: 'The What, Where, How, and Why of everything Confetti',
   iconUrl: '/favicon.png',
   sidebar: [
     {
@@ -34,8 +34,8 @@ export default defineConfig({
           link: '/technical-how-tos/verifying-contracts',
         },
         {
-          text: 'JokeRace Onchain Data',
-          link: '/technical-how-tos/jokerace-onchain-data',
+          text: 'Confetti Onchain Data',
+          link: '/technical-how-tos/confetti-onchain-data',
         },
         {
           text: 'Troubleshooting',

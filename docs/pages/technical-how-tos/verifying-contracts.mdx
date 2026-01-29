@@ -1,6 +1,6 @@
 # Verifying Contracts
 
-Below are the steps to verify a contract you deployed through JokeRace.
+Below are the steps to verify a contract you deployed through Confetti.
 
 ::::steps
 
@@ -12,7 +12,7 @@ First, run the below command in your terminal to download and install [Foundry](
 curl -L https://foundry.paradigm.xyz ​| bash && foundryup
 ```
 
-Then run this command with the contract address and the RPC url for the chain that the contract is on (you can find a public RPC url to use on our Github [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains) if you don't have one already) to return the version of that contract.
+Then run this command with the contract address and the RPC url for the chain that the contract is on (you can find a public RPC url to use on our Github [here](https://github.com/jk-labs-inc/confetti/tree/staging/packages/react-app-revamp/config/wagmi/custom-chains) if you don't have one already) to return the version of that contract.
 
 ```bash
 cast call <CONTRACT ADDRESS> "version()(string)" --rpc-url "<RPC_URL>"
@@ -20,9 +20,9 @@ cast call <CONTRACT ADDRESS> "version()(string)" --rpc-url "<RPC_URL>"
 
 ## Copy the flattened file of that contract version
 
-For `Contest` contracts, look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi).
+For `Contest` contracts, look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/confetti/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi).
 
-For `VoterRewardsModule` contracts, look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/jokerace/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi/modules).
+For `VoterRewardsModule` contracts, look for the flattened filed in the respective version's folder [here](https://github.com/jk-labs-inc/confetti/tree/staging/packages/react-app-revamp/contracts/bytecodeAndAbi/modules).
 
 ## Verify the contract
 
